@@ -157,6 +157,11 @@ input {
   bottom:0;
 }
 
+  .full-width{width:100%;}
+  .full-height{height:100%;}
+  .vp-width{width:100vw;}
+  .vp-height{height:100vh;}
+  
 .mt-0{margin-top:0.75rem;}
 .mr-0{margin-right:0.75rem;}
 .mb-0{margin-bottom:0.75rem;}

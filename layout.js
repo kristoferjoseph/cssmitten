@@ -7,6 +7,11 @@ module.exports = function layout() {
   `${position}
   ${display}
   ${flex}
-  ${layer}`
+  ${layer}
+  .full-width{width:100%;}
+  .full-height{height:100%;}
+  .vp-width{width:100vw;}
+  .vp-height{height:100vh;}
+  `
   return output
 }()
