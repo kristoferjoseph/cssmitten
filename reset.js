@@ -1,4 +1,5 @@
-module.exports =
+module.exports = function reset(query) {
+  var output =
 `*,
 *:before,
 *:after {
@@ -8,28 +9,18 @@ module.exports =
   border: inherit;
   box-sizing: border-box;
 }
-
-*:focus {
-  outline: none;
-}
-
-button {
-  user-select: none;
-}
-
-img {
-  max-width: 100%;
-}
-
+*:focus {outline: none;}
+button {user-select: none;}
+img {max-width: 100%;}
 svg {
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
-
 select,
 textarea,
 button,
-input {
-  font-family: inherit;
-}`
+input {font-family: inherit;}`
+
+  return output
+}

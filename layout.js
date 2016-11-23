@@ -1,17 +1,14 @@
 var position = require('./position')
 var display = require('./display')
+var dimensions = require('./dimensions')
 var flex = require('./flex')
 var layer = require('./layer')
-module.exports = function layout() {
+module.exports = function layout(query) {
   var output =
-  `${position}
-  ${display}
-  ${flex}
-  ${layer}
-  .full-width{width:100%;}
-  .full-height{height:100%;}
-  .vp-width{width:100vw;}
-  .vp-height{height:100vh;}
-  `
+`${position()}
+${display()}
+${dimensions()}
+${flex()}
+`
   return output
-}()
+}

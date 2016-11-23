@@ -1,8 +1,9 @@
-module.exports = function typeface(name) {
+module.exports = function typeface(base, name) {
   var output =
-  `body {
-    font-family: ${name}, sans-serif;
-    font-weight: normal;
-  }`
+`html {font-size: ${base};}
+body {
+  font-family: '${name}', sans-serif;
+  font-weight: normal;
+}`
   return output
-}()
+}

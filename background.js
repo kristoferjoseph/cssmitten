@@ -1,5 +1,5 @@
 var colors = require('./colors')
-module.exports = function background() {
+module.exports = function background(query) {
   var output = ''
   Object.keys(colors)
     .map(
@@ -9,4 +9,4 @@ module.exports = function background() {
     )
 
   return output
-}()
+}
