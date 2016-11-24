@@ -16,20 +16,20 @@ function cssmitten() {
   Object.keys(queries)
     .map(
       function(query) {
-        output += styles(query, queries[query])
+        output += media(queries[query], styles(query))
       }
     )
 
   return output
 }
 
-function styles(query, size) {
-  var content = `${typography(query)}
+function styles(query) {
+  var output = `${typography(query)}
 ${layout(query)}
 ${margin(query)}
 ${padding(query)}
 ${overflow(query)}`
-  return media(size, content)
+  return output
 }
 
 console.log(cssmitten())

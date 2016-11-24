@@ -96,8 +96,6 @@ body {
 .border-dusty-blue{border-color:#4D92E2;}
 .border-regent-gray{border-color:#8C96A1;}
 .border-dark-red{border-color:#DE003A;}
-
-@media only screen and (min-width:undefined) {
 .size0{font-size:0.75rem;}
 .size1{font-size:0.875rem;}
 .size2{font-size:1rem;}
@@ -215,7 +213,6 @@ body {
 .scroll-y{overflow-y:scroll;-webkit-overflow-scrolling: touch;}
 .hidden-y{overflow-y:hidden;}
 .visible-y{overflow-y:visibile;}
-}
 @media only screen and (min-width:48em) {
 .size0-lg{font-size:0.75rem;}
 .size1-lg{font-size:0.875rem;}
@@ -335,7 +332,7 @@ body {
 .hidden-y-lg{overflow-y:hidden;}
 .visible-y-lg{overflow-y:visibile;}
 }
-@media only screen and (min-width:64rem) {
+@media only screen and (min-width:64em) {
 .size0-max{font-size:0.75rem;}
 .size1-max{font-size:0.875rem;}
 .size2-max{font-size:1rem;}
