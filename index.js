@@ -1,22 +1,35 @@
-var reset = require('./reset')
+var theme = require('./theme')
 var typography = require('./typography')
-var typeface = require('./typeface')
-var background = require('./background')
 var border = require('./border')
 var layout = require('./layout')
 var margin = require('./margin')
 var padding = require('./padding')
 var overflow = require('./overflow')
-var fontName = 'Mark'
-var fontBase = '16px'
-var styles =
-`${reset()}
-${typeface(fontBase,fontName)}
-${typography()}
-${background()}
-${border()}
-${layout()}
-${margin()}
-${padding()}
-${overflow()}`
-console.log(styles)
+var media = require('./media')
+var queries = require('./queries')
+
+function cssmitten() {
+  var i = 0
+  var output = theme()
+  output += styles()
+
+  Object.keys(queries)
+    .map(
+      function(query) {
+        output += styles(query, queries[query])
+      }
+    )
+
+  return output
+}
+
+function styles(query, size) {
+  var content = `${typography(query)}
+${layout(query)}
+${margin(query)}
+${padding(query)}
+${overflow(query)}`
+  return media(size, content)
+}
+
+console.log(cssmitten())

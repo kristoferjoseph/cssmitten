@@ -4,6 +4,8 @@
   "description": "customizable css lib",
   "main": "index.js",
   "scripts": {
+    "build": "node ./index.js > ./cssmitten.css",
+    "release": "npm run build && cssnano < ./cssmitten.css > ./cssmitten.min.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/kristoferjoseph/cssmitten/issues"
   },
-  "homepage": "https://github.com/kristoferjoseph/cssmitten#readme"
+  "homepage": "https://github.com/kristoferjoseph/cssmitten#readme",
+  "devDependencies": {
+    "cssnano-cli": "^1.0.5"
+  }
 }

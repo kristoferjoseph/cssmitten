@@ -5,10 +5,10 @@ var flex = require('./flex')
 var layer = require('./layer')
 module.exports = function layout(query) {
   var output =
-`${position()}
-${display()}
-${dimensions()}
-${flex()}
+`${position(query)}
+${display(query)}
+${dimensions(query)}
+${flex(query)}
 `
   return output
 }
