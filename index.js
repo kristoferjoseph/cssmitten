@@ -24,12 +24,11 @@ function cssmitten() {
 }
 
 function styles(query) {
-  var output = `${typography(query)}
+ return `${typography(query)}
 ${layout(query)}
 ${margin(query)}
 ${padding(query)}
 ${overflow(query)}`
-  return output
 }
 
 console.log(cssmitten())
