@@ -10,7 +10,7 @@ module.exports = function sizes(query) {
 
   for (i; i<l; i++) {
     v = scale[i]
-    output += `.size${i}${query}{font-size:${rems(v)};}\n`
+    output += `%size${i}${query}{font-size:${rems(v)};}\n`
   }
 
   return output

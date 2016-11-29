@@ -6,7 +6,7 @@ module.exports = function padding(query) {
 
   return sided(
     function(label,step,side,value) {
-      return `.p${label}${step}${query}{padding-${side}:${rems(value)};}\n`
+      return `%p${label}${step}${query}{padding-${side}:${rems(value)};}\n`
     }
   )
 }

@@ -1,4 +1,4 @@
-module.exports = function reset(query) {
+module.exports = function reset() {
   var output =
 `*,
 *:before,

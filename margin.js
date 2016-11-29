@@ -6,7 +6,7 @@ module.exports = function margin(query) {
 
   return sided(
     function(label,step,side,value) {
-      return `.m${label}${step}${query}{margin-${side}:${rems(value)};}\n`
+      return `%m${label}${step}${query}{margin-${side}:${rems(value)};}\n`
     }
   )
 }

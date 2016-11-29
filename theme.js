@@ -5,13 +5,16 @@ var background = require('./background')
 var border = require('./border')
 var fontName = 'Mark'
 var fontBase = '16px'
+var weights = require('./weights')
 
 module.exports = function theme() {
-  var output = `${reset()}
+  var output =
+`${reset()}
 ${typeface(fontBase,fontName)}
+${weights}
 ${colors()}
 ${background()}
 ${border()}`
 
-    return output
+  return output
 }
