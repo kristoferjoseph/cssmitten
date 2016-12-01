@@ -5,8 +5,8 @@ module.exports = function dimensions(query) {
   var output =
 `%width-100${query}{width:100%;}
 %height-100${query}{height:100%;}
-%vp-width${query}{width:100vw;}
-%vp-height${query}{height:100vh;}`
+%width-vp${query}{width:100vw;}
+%height-vp${query}{height:100vh;}`
 
   return output
 }

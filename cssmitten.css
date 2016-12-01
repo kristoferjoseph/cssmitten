@@ -1,24 +1,3 @@
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  background: inherit;
-  border: inherit;
-  box-sizing: border-box;
-}
-*:focus {outline: none;}
-button {user-select: none;}
-img {max-width: 100%;}
-svg {
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-select,
-textarea,
-button,
-input {font-family: inherit;}
 html {font-size: 16px;}
 body {
   font-family: 'Mark', sans-serif;
@@ -30,146 +9,148 @@ body {
 %medium{font-weight:400;}
 %bold{font-weight:700;}
 /* white */
-%color0:{color:#FFFFFF;}
+%color0{color:#FFFFFF;}
 /* ocd-green */
-%color1:{color:#OCD000;}
+%color1{color:#OCD000;}
 /* peacock-blue */
-%color2:{color:#009DD6;}
+%color2{color:#009DD6;}
 /* beast-grey */
-%color3:{color:#666666;}
+%color3{color:#666666;}
 /* sunrise */
-%color4:{color:#FD6D6D;}
+%color4{color:#FD6D6D;}
 /* seashell */
-%color5:{color:#F1F1F1;}
+%color5{color:#F1F1F1;}
 /* lily-white */
-%color6:{color:#EBEBEB;}
+%color6{color:#EBEBEB;}
 /* thundercloud */
-%color7:{color:#AAAAAA;}
+%color7{color:#AAAAAA;}
 /* mid-grey */
-%color8:{color:#CDCDCD;}
+%color8{color:#CDCDCD;}
 /* mountain-grey */
-%color9:{color:#939393;}
+%color9{color:#939393;}
 /* yelange */
-%color10:{color:#FFBB1F;}
+%color10{color:#FFBB1F;}
 /* orange */
-%color11:{color:#FF9E00;}
+%color11{color:#FF9E00;}
 /* sky-blue */
-%color12:{color:#02B6F6;}
+%color12{color:#02B6F6;}
 /* salmon */
-%color13:{color:#F46666;}
+%color13{color:#F46666;}
 /* red-orange */
-%color14:{color:#FF3737;}
+%color14{color:#FF3737;}
 /* slate */
-%color15:{color:#6C8BAC;}
+%color15{color:#6C8BAC;}
 /* sea-green */
-%color16:{color:#33B067;}
+%color16{color:#33B067;}
 /* mint */
-%color17:{color:#B1FFD1;}
+%color17{color:#B1FFD1;}
 /* robot-blue */
-%color18:{color:#4FSCEO;}
+%color18{color:#4FSCEO;}
 /* lavendar */
-%color19:{color:#D6D9FF;}
+%color19{color:#D6D9FF;}
 /* dusty-blue */
-%color20:{color:#4D92E2;}
+%color20{color:#4D92E2;}
 /* regent-gray */
-%color21:{color:#8C96A1;}
+%color21{color:#8C96A1;}
 /* dark-red */
-%color22:{color:#DE003A;}
+%color22{color:#DE003A;}
 
+/* transparent */
+%background0{background-color:transparent;}
 /* white */
-%background0:{background-color:#FFFFFF;}
+%background1{background-color:#FFFFFF;}
 /* ocd-green */
-%background1:{background-color:#OCD000;}
+%background2{background-color:#OCD000;}
 /* peacock-blue */
-%background2:{background-color:#009DD6;}
+%background3{background-color:#009DD6;}
 /* beast-grey */
-%background3:{background-color:#666666;}
+%background4{background-color:#666666;}
 /* sunrise */
-%background4:{background-color:#FD6D6D;}
+%background5{background-color:#FD6D6D;}
 /* seashell */
-%background5:{background-color:#F1F1F1;}
+%background6{background-color:#F1F1F1;}
 /* lily-white */
-%background6:{background-color:#EBEBEB;}
+%background7{background-color:#EBEBEB;}
 /* thundercloud */
-%background7:{background-color:#AAAAAA;}
+%background8{background-color:#AAAAAA;}
 /* mid-grey */
-%background8:{background-color:#CDCDCD;}
+%background9{background-color:#CDCDCD;}
 /* mountain-grey */
-%background9:{background-color:#939393;}
+%background10{background-color:#939393;}
 /* yelange */
-%background10:{background-color:#FFBB1F;}
+%background11{background-color:#FFBB1F;}
 /* orange */
-%background11:{background-color:#FF9E00;}
+%background12{background-color:#FF9E00;}
 /* sky-blue */
-%background12:{background-color:#02B6F6;}
+%background13{background-color:#02B6F6;}
 /* salmon */
-%background13:{background-color:#F46666;}
+%background14{background-color:#F46666;}
 /* red-orange */
-%background14:{background-color:#FF3737;}
+%background15{background-color:#FF3737;}
 /* slate */
-%background15:{background-color:#6C8BAC;}
+%background16{background-color:#6C8BAC;}
 /* sea-green */
-%background16:{background-color:#33B067;}
+%background17{background-color:#33B067;}
 /* mint */
-%background17:{background-color:#B1FFD1;}
+%background18{background-color:#B1FFD1;}
 /* robot-blue */
-%background18:{background-color:#4FSCEO;}
+%background19{background-color:#4FSCEO;}
 /* lavendar */
-%background19:{background-color:#D6D9FF;}
+%background20{background-color:#D6D9FF;}
 /* dusty-blue */
-%background20:{background-color:#4D92E2;}
+%background21{background-color:#4D92E2;}
 /* regent-gray */
-%background21:{background-color:#8C96A1;}
+%background22{background-color:#8C96A1;}
 /* dark-red */
-%background22:{background-color:#DE003A;}
+%background23{background-color:#DE003A;}
 
-%border{border: 1px solid transparent;}
+%border0{border-color:transparent;}
 /* white */
-%border0{border-color:#FFFFFF;}
+%border1{border-color:#FFFFFF;}
 /* ocd-green */
-%border1{border-color:#OCD000;}
+%border2{border-color:#OCD000;}
 /* peacock-blue */
-%border2{border-color:#009DD6;}
+%border3{border-color:#009DD6;}
 /* beast-grey */
-%border3{border-color:#666666;}
+%border4{border-color:#666666;}
 /* sunrise */
-%border4{border-color:#FD6D6D;}
+%border5{border-color:#FD6D6D;}
 /* seashell */
-%border5{border-color:#F1F1F1;}
+%border6{border-color:#F1F1F1;}
 /* lily-white */
-%border6{border-color:#EBEBEB;}
+%border7{border-color:#EBEBEB;}
 /* thundercloud */
-%border7{border-color:#AAAAAA;}
+%border8{border-color:#AAAAAA;}
 /* mid-grey */
-%border8{border-color:#CDCDCD;}
+%border9{border-color:#CDCDCD;}
 /* mountain-grey */
-%border9{border-color:#939393;}
+%border10{border-color:#939393;}
 /* yelange */
-%border10{border-color:#FFBB1F;}
+%border11{border-color:#FFBB1F;}
 /* orange */
-%border11{border-color:#FF9E00;}
+%border12{border-color:#FF9E00;}
 /* sky-blue */
-%border12{border-color:#02B6F6;}
+%border13{border-color:#02B6F6;}
 /* salmon */
-%border13{border-color:#F46666;}
+%border14{border-color:#F46666;}
 /* red-orange */
-%border14{border-color:#FF3737;}
+%border15{border-color:#FF3737;}
 /* slate */
-%border15{border-color:#6C8BAC;}
+%border16{border-color:#6C8BAC;}
 /* sea-green */
-%border16{border-color:#33B067;}
+%border17{border-color:#33B067;}
 /* mint */
-%border17{border-color:#B1FFD1;}
+%border18{border-color:#B1FFD1;}
 /* robot-blue */
-%border18{border-color:#4FSCEO;}
+%border19{border-color:#4FSCEO;}
 /* lavendar */
-%border19{border-color:#D6D9FF;}
+%border20{border-color:#D6D9FF;}
 /* dusty-blue */
-%border20{border-color:#4D92E2;}
+%border21{border-color:#4D92E2;}
 /* regent-gray */
-%border21{border-color:#8C96A1;}
+%border22{border-color:#8C96A1;}
 /* dark-red */
-%border22{border-color:#DE003A;}
+%border23{border-color:#DE003A;}
 
 %size0{font-size:0.75rem;}
 %size1{font-size:0.875rem;}
@@ -189,6 +170,10 @@ body {
 %absolute{position:absolute;}
 %relative{position:relative;}
 %fixed{position:fixed;}
+%top0{top:0;}
+%right0{right:0;}
+%bottom0{bottom:0;}
+%left0{left:0;}
 %none{display:none;}
 %block{display:block;}
 %inline-block{display:block;}

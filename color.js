@@ -8,7 +8,7 @@ module.exports = function color(query) {
     .map(
       function(color, i) {
         output += `/* ${color} */
-%color${i}${query}:{color:${colors[color]};}\n`
+%color${i}${query}{color:${colors[color]};}\n`
       }
     )
 
