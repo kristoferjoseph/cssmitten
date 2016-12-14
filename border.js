@@ -1,16 +1,16 @@
 var colors = require('./colors')
 
 module.exports = function border(query) {
-  query = query || ''
-  query? query = `-${query}`: ''
-
-  var output = `/* transparent */
-%border0{border-color:transparent;}\n`
+  var output = ''
   Object.keys(colors)
     .map(
       function(color, i) {
-        output += `/* ${color} */
-%border${i+1}${query}{border-color:${colors[color]};}\n`
+        output +=
+`.border${i+1}${query}{border-color:var(--${color});}
+.border${i+1}-hover${query}:hover,
+.border${i+1}-hover${query}:focus{border-color:var(--${color});}
+.bordere${i+1}-active${query}:active{border-color:var(--${color});}
+`
       }
     )
   return output

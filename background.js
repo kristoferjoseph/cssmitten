@@ -1,15 +1,15 @@
 var colors = require('./colors')
 module.exports = function background(query) {
-  query = query || ''
-  query? query = `-${query}`: ''
-
-  var output = `/* transparent */
-%background0${query}{background-color:transparent;}\n`
+  var output = ''
   Object.keys(colors)
     .map(
       function(color, i) {
-        output += `/* ${color} */
-%background${i+1}${query}{background-color:${colors[color]};}\n`
+        output +=
+`.background${i+1}${query}{background-color:var(--${color});}
+.background${i+1}-hover${query}:hover,
+.background${i+1}-hover${query}:focus{background-color:var(--${color});}
+.background${i+1}-active${query}:active{background-color:var(--${color});}
+`
       }
     )
 

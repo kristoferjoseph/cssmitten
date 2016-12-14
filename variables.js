@@ -9,4 +9,4 @@ module.exports = function variables() {
     )
   output += `}\n`
   return output
-}()
+}
