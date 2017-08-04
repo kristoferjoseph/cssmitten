@@ -1,25 +1,4 @@
 module.exports = {
-  'white':'#FFFFFF',
-  'ocd-green':'#OCD000',
-  'peacock-blue':'#009DD6',
-  'beast-grey':'#666666',
-  'sunrise':'#FD6D6D',
-  'seashell':'#F1F1F1',
-  'lily-white':'#EBEBEB',
-  'thundercloud':'#AAAAAA',
-  'mid-grey':'#CDCDCD',
-  'mountain-grey':'#939393',
-  'yelange':'#FFBB1F',
-  'orange':'#FF9E00',
-  'sky-blue':'#02B6F6',
-  'salmon':'#F46666',
-  'red-orange':'#FF3737',
-  'slate':'#6C8BAC',
-  'sea-green':'#33B067',
-  'mint':'#B1FFD1',
-  'robot-blue':'#4FSCEO',
-  'lavendar':'#D6D9FF',
-  'dusty-blue':'#4D92E2',
-  'regent-gray':'#8C96A1',
-  'dark-red':'#DE003A'
+  // add colors like so
+  'white':'#FFFFFF'
 }

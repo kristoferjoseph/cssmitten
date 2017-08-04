@@ -1,11 +1,4 @@
 module.exports = [
-  12,
-  14,
-  16,
-  18,
-  20,
-  24,
-  28,
-  30,
-  40
+  // add entries to the scale like so
+  12
 ]
