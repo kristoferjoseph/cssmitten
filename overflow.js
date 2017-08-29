@@ -1,9 +1,8 @@
 module.exports = function overflow(query) {
-  query = query || ''
-  query? query = `-${query}`: ''
+  query = query ? query = `-${query}` : ''
 
-   var output =
- `.scroll${query}{overflow:scroll;-webkit-overflow-scrolling: touch;}
+   return `
+.scroll${query}{overflow:scroll;-webkit-overflow-scrolling: touch;}
 .hidden${query}{overflow:hidden;}
 .visible${query}{overflow:visibile;}
 .scroll-x${query}{overflow-x:scroll;-webkit-overflow-scrolling: touch;}
@@ -13,5 +12,4 @@ module.exports = function overflow(query) {
 .hidden-y${query}{overflow-y:hidden;}
 .visible-y${query}{overflow-y:visibile;}`
 
-  return output
 }

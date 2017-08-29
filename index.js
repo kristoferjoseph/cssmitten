@@ -7,10 +7,12 @@ var padding = require('./padding')
 var overflow = require('./overflow')
 var media = require('./media')
 var queries = require('./queries')
+var utils = require('./utils')
 
 function cssmitten() {
   var i = 0
   var output = theme()
+  output += utils()
   output += styles()
 
   Object.keys(queries)
@@ -24,12 +26,14 @@ function cssmitten() {
 }
 
 function styles(query) {
-  var output = `${typography(query)}
+  return `
+${typography(query)}
 ${layout(query)}
 ${margin(query)}
 ${padding(query)}
-${overflow(query)}`
-  return output
+${overflow(query)}
+`
+
 }
 
 console.log(cssmitten())

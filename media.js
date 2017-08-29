@@ -1,8 +1,7 @@
 module.exports = function media(size, content) {
-  var output =`
+  return `
 @media only screen and (min-width:${size}) {
 ${content}
 }`
-  return output
 }
 

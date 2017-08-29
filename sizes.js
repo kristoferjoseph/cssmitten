@@ -1,8 +1,7 @@
 var scale = require('./scale')
 var rems = require('./rems')
 module.exports = function sizes(query) {
-  query = query || ''
-  query? query = `-${query}`: ''
+  query = query ? query = `-${query}` : ''
   var output = ''
   var i = 0
   var l = scale.length
@@ -10,7 +9,7 @@ module.exports = function sizes(query) {
 
   for (i; i<l; i++) {
     v = scale[i]
-    output += `.size${i}${query}{font-size:${rems(v)};}\n`
+    output += `.fs${i}${query}{font-size:${rems(v)};}\n`
   }
 
   return output

@@ -1,6 +1,6 @@
 var scale = require('./scale')
 var sides = require('./sides')
-module.exports = function sided(template) {
+module.exports = function sided (template) {
   var step = 0
   var l = scale.length
   var output = ''

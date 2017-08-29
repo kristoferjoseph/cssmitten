@@ -1,14 +1,12 @@
 var colors = require('./colors')
-module.exports = function color (query) {
+module.exports = function stroke (query) {
   query = query ? query = `-${query}` : ''
-
   var output = ''
   Object.keys(colors)
     .map(
-      function(k) {
-        output += `.${k}${query}:{color:${colors[k]};}\n`
+      function(color) {
+        output += `.s-${color}${query}{stroke:${colors[color]};}\n`
       }
     )
-
   return output
 }

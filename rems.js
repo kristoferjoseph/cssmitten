@@ -1,3 +1,4 @@
+var base = require('./base')
 module.exports = function rems(value) {
-  return `${value/16}rem`
+  return `${value/base}rem`
 }

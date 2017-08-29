@@ -1,6 +1,5 @@
 module.exports = function display(query) {
-  query = query || ''
-  query? query = `-${query}`: ''
+  query = query ? query = `-${query}` : ''
 
   var output =
 `.none${query}{display:none;}

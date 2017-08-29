@@ -1,7 +1,6 @@
 var colors = require('./colors')
 module.exports = function background(query) {
-  query = query || ''
-  query? query = `-${query}`: ''
+  query = query ? query = `-${query}` : ''
 
   var output = ''
   Object.keys(colors)
