@@ -15,5 +15,5 @@ Customize `colors.js`, `scale.js`, etc. then generate the `cssmitten.css` file:
 
 Generate a minified version:
 
-`npm run release`
+`npm run dist`
 
