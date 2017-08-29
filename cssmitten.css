@@ -49,47 +49,47 @@ body {
   line-height: 1.2;
   overflow: hidden;
 }
- .white:{color:#FFFFFF;}
-.action:{color:#0CD00;}
-.blue:{color:#009DD6;}
-.primary-grey:{color:#666666;}
-.secondary-grey:{color:#AAAAAA;}
-.error:{color:#F46666;}
-.delete:{color:#FF3737;}
-.context-light:{color:#00475F;}
-.context-mid:{color:#003C51;}
-.context-dark:{color:#002F40;}
-.mid-grey:{color:#CDCDCD;}
-.light-grey:{color:#EBEBEB;}
-.today:{color:#FFBB1F;}
-.upcoming:{color:#FF9E00;}
-.someday:{color:#02B6F6;}
-.projects:{color:#6C8BAC;}
-.timeframe:{color:#33B067;}
-.brand:{color:#FD6D6D;}
-.timezone:{color:#00B595;}
-.request:{color:#4F5CE0;}
+ .white{color:#FFFFFF;}
+.action{color:#0CD00;}
+.blue{color:#009DD6;}
+.primary-grey{color:#666666;}
+.secondary-grey{color:#AAAAAA;}
+.error{color:#F46666;}
+.delete{color:#FF3737;}
+.context-light{color:#00475F;}
+.context-mid{color:#003C51;}
+.context-dark{color:#002F40;}
+.mid-grey{color:#CDCDCD;}
+.light-grey{color:#EBEBEB;}
+.today{color:#FFBB1F;}
+.upcoming{color:#FF9E00;}
+.someday{color:#02B6F6;}
+.projects{color:#6C8BAC;}
+.timeframe{color:#33B067;}
+.brand{color:#FD6D6D;}
+.timezone{color:#00B595;}
+.request{color:#4F5CE0;}
 
- .bg-white:{background-color:#FFFFFF;}
-.bg-action:{background-color:#0CD00;}
-.bg-blue:{background-color:#009DD6;}
-.bg-primary-grey:{background-color:#666666;}
-.bg-secondary-grey:{background-color:#AAAAAA;}
-.bg-error:{background-color:#F46666;}
-.bg-delete:{background-color:#FF3737;}
-.bg-context-light:{background-color:#00475F;}
-.bg-context-mid:{background-color:#003C51;}
-.bg-context-dark:{background-color:#002F40;}
-.bg-mid-grey:{background-color:#CDCDCD;}
-.bg-light-grey:{background-color:#EBEBEB;}
-.bg-today:{background-color:#FFBB1F;}
-.bg-upcoming:{background-color:#FF9E00;}
-.bg-someday:{background-color:#02B6F6;}
-.bg-projects:{background-color:#6C8BAC;}
-.bg-timeframe:{background-color:#33B067;}
-.bg-brand:{background-color:#FD6D6D;}
-.bg-timezone:{background-color:#00B595;}
-.bg-request:{background-color:#4F5CE0;}
+ .bg-white{background-color:#FFFFFF;}
+.bg-action{background-color:#0CD00;}
+.bg-blue{background-color:#009DD6;}
+.bg-primary-grey{background-color:#666666;}
+.bg-secondary-grey{background-color:#AAAAAA;}
+.bg-error{background-color:#F46666;}
+.bg-delete{background-color:#FF3737;}
+.bg-context-light{background-color:#00475F;}
+.bg-context-mid{background-color:#003C51;}
+.bg-context-dark{background-color:#002F40;}
+.bg-mid-grey{background-color:#CDCDCD;}
+.bg-light-grey{background-color:#EBEBEB;}
+.bg-today{background-color:#FFBB1F;}
+.bg-upcoming{background-color:#FF9E00;}
+.bg-someday{background-color:#02B6F6;}
+.bg-projects{background-color:#6C8BAC;}
+.bg-timeframe{background-color:#33B067;}
+.bg-brand{background-color:#FD6D6D;}
+.bg-timezone{background-color:#00B595;}
+.bg-request{background-color:#4F5CE0;}
 
  
 .ba{border: 1px solid;}

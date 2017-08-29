@@ -6,7 +6,7 @@ module.exports = function color (query) {
   Object.keys(colors)
     .map(
       function(k) {
-        output += `.${k}${query}:{color:${colors[k]};}\n`
+        output += `.${k}${query}{color:${colors[k]};}\n`
       }
     )
 

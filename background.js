@@ -6,7 +6,7 @@ module.exports = function background(query) {
   Object.keys(colors)
     .map(
       function(k) {
-        output += `.bg-${k}${query}:{background-color:${colors[k]};}\n`
+        output += `.bg-${k}${query}{background-color:${colors[k]};}\n`
       }
     )
 
