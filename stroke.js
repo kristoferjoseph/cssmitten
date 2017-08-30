@@ -1,12 +1,10 @@
-var colors = require('./colors')
+var clrs = require('./colors')
 module.exports = function stroke (query) {
   query = query ? query = `-${query}` : ''
-  var output = ''
-  Object.keys(colors)
-    .map(
-      function(color) {
-        output += `.s-${color}${query}{stroke:${colors[color]};}\n`
-      }
-    )
+  var colors = Object.keys(clrs)
+  var output = '/* STROKE */\n'
+  colors.map(function(color) {
+    output += `.s-${color}${query}{stroke:${clrs[color]};}\n`
+  })
   return output
 }

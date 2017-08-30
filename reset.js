@@ -1,5 +1,5 @@
 module.exports = function reset (query) {
-  return `
+  return `/* RESET */
 *,
 *:before,
 *:after {
@@ -8,9 +8,6 @@ module.exports = function reset (query) {
   background: inherit;
   border: none;
   box-sizing: border-box;
-  text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 *:focus {outline: none;}
 a {text-decoration: none;}

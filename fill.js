@@ -1,7 +1,7 @@
 var colors = require('./colors')
 module.exports = function fill (query) {
   query = query ? query = `-${query}` : ''
-  var output = ''
+  var output = '/* FILL */\n'
   Object.keys(colors)
     .map(
       function(color) {

@@ -1,14 +1,10 @@
-var colors = require('./colors')
+var clrs = require('./colors')
 module.exports = function color (query) {
   query = query ? query = `-${query}` : ''
-
-  var output = ''
-  Object.keys(colors)
-    .map(
-      function(k) {
-        output += `.${k}${query}{color:${colors[k]};}\n`
-      }
-    )
-
+  var colors = Object.keys(clrs)
+  var output = '\n/* COLOR */\n'
+  colors && colors.map(function(k) {
+    output += `.${k}${query}{color:${clrs[k]};}\n`
+  })
   return output
 }

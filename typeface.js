@@ -1,5 +1,5 @@
 module.exports = function typeface (base, name) {
-  return `
+  return `/* TYPEFACE */
 html,
 body,
 #root {
@@ -11,6 +11,9 @@ body {
   font-weight: normal;
   line-height: 1.2;
   overflow: hidden;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }`
 
 }

@@ -1,18 +1,17 @@
-var colors = require('./colors')
-module.exports = function border(query) {
+var clrs = require('./colors')
+var radius = require('./radius')
+module.exports = function border (query) {
   query = query ? query = `-${query}` : ''
-
-  var output =`
-.ba{border: 1px solid;}
+  var colors = Object.keys(clrs)
+  var output =`/* BORDER */
+.b{border: 1px solid;}
 .bt{border-top: 1px solid;}
 .br{border-right: 1px solid;}
 .bb{border-bottom: 1px solid;}
 .bl{border-left: 1px solid;}`
-  Object.keys(colors)
-    .map(
-      function(color) {
-        output += `.b-${color}${query}{border-color:${colors[color]};}\n`
-      }
-    )
+  colors.map(function(color) {
+    output += `.b-${color}${query}{border-color:${clrs[color]};}\n`
+  })
+  output += radius(query)
   return output
 }
