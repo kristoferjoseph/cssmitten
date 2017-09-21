@@ -1,5 +1,4 @@
 module.exports = function display(query) {
-  query = query ? query = `-${query}` : ''
   return `/* DISPLAY */
 .none${query}{display:none;}
 .block${query}{display:block;}

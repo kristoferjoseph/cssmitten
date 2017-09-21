@@ -3,7 +3,7 @@ var display = require('./display')
 var dimensions = require('./dimensions')
 var flex = require('./flex')
 module.exports = function layout(query) {
-  return `/* === LAYOUT === */
+  return `\n/* -----  LAYOUT ----- */\n
 ${position(query)}
 ${display(query)}
 ${dimensions(query)}

@@ -1,6 +1,10 @@
 module.exports = function flex(query) {
-  query = query ? query = `-${query}` : ''
   return `/* FLEX */
+.fd-r${query}{flex-direction: row;}
+.fd-rr${query}{flex-direction: row-reverse;}
+.fd-c${query}{flex-direction: column;}
+.fd-cr${query}{flex-direction: column-reverse;}
+.fd-i${query}{flex-direction: inherit;}
 .ai-c${query}{align-items:center;}
 .jc-a${query}{justify-content:space-around;}
 .jc-b${query}{justify-content:space-between;}

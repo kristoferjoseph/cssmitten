@@ -1,5 +1,6 @@
 var reset = require('./reset')
 var typeface = require('./typeface')
+var variables = require('./variables')
 var colors = require('./color')
 var background = require('./background')
 var border = require('./border')
@@ -8,19 +9,21 @@ var stroke = require('./stroke')
 var base = require('./base')
 var fontBase = base+'px'
 var fontName = 'Mark'
-module.exports = function theme () {
+module.exports = function theme (query) {
+  query = query || ''
   var output  = ''
   function append (string) {
     output += string + '\n'
   }
 
-  append('/* === THEME === */')
+  append('\n/* ----- THEME ----- */\n')
+  append(variables())
   append(reset())
   append(typeface(fontBase,fontName))
-  append(colors())
-  append(background())
-  append(border())
-  append(fill())
-  append(stroke())
+  append(colors(query))
+  append(background(query))
+  append(border(query))
+  append(fill(query))
+  append(stroke(query))
   return output
 }

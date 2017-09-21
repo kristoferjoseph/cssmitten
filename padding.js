@@ -1,7 +1,6 @@
 var sided = require('./sided')
 var rems = require('./rems')
 module.exports = function padding(query) {
-  query = query ? query = `-${query}` : ''
   var output = '/* PADDING */\n'
   output += sided(function(label,step,side,value) {
     side = side ? side = `-${side}` : ''

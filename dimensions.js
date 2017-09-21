@@ -1,5 +1,4 @@
 module.exports = function dimensions(query) {
-  query = query ? query = `-${query}` : ''
   return `/* DIMENSIONS */
 .w-100${query}{width:100%;}
 .h-100${query}{height:100%;}
