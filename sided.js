@@ -1,19 +1,22 @@
 var scale = require('./scale')
 var sds = require('./sides')
 module.exports = function sided (template) {
-  var step = 0
+  var i = 0
   var l = scale.length
+  var half = Math.floor(l * 0.5)
+  var step = half
   var sides = Object.keys(sds)
   var output = ''
   var value
   var side
-  for (step; step<l; step++) {
-    value = scale[step]
-    output += template('',step,'',value)
+  for (i; i < l; i++) {
+    var s = step--
+    value = scale[i]
+    output += template('', s, '', value)
     output += sides && sides.map(
       label => {
         side = sds[label]
-        return template(label,step,side,value)
+        return template(label, s, side, value)
       }
     ).join('')
   }

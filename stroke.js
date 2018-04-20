@@ -6,7 +6,7 @@ module.exports = function stroke (query) {
   var variable
   sections.forEach(function (section) {
     colors = Object.keys(clrs[section])
-    colors && colors.map(function(color, i) {
+    colors && colors.map(function (color, i) {
       variable = section + i
       output += `.s-${variable}${query}{stroke:var(--${variable});}/* ${color} */\n`
     })

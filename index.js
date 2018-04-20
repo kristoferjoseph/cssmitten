@@ -10,8 +10,7 @@ var media = require('./media')
 var queries = require('./queries')
 var utils = require('./utils')
 
-function cssmitten() {
-  var i = 0
+function cssmitten () {
   var output = theme()
   output += utils()
   output += cursor
@@ -19,7 +18,7 @@ function cssmitten() {
 
   Object.keys(queries)
     .map(
-      function(query) {
+      function (query) {
         output += media(queries[query], styles(query))
       }
     )
@@ -27,7 +26,7 @@ function cssmitten() {
   return output
 }
 
-function styles(query) {
+function styles (query) {
   query = query ? query = `-${query}` : ''
   return `
 ${typography(query)}
@@ -37,7 +36,6 @@ ${padding(query)}
 ${overflow(query)}
 ${visibility(query)}
 `
-
 }
 
 console.log(cssmitten())

@@ -6,7 +6,7 @@ module.exports = function color (query) {
   var variable
   sections.forEach(function (section) {
     colors = Object.keys(clrs[section])
-    colors && colors.map(function(color, i) {
+    colors && colors.map(function (color, i) {
       variable = section + i
       output += `.c-${variable}${query}{color:var(--${variable});}/* ${color} */\n`
     })

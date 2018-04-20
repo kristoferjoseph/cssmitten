@@ -1,4 +1,4 @@
-module.exports = function flex(query) {
+module.exports = function flex (query) {
   return `/* FLEX */
 .fd-r${query}{flex-direction: row;}
 .fd-rr${query}{flex-direction: row-reverse;}

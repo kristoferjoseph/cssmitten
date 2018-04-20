@@ -1,1 +1,1 @@
-module.exports =`.list {list-style:none;}`
+module.exports = `.list {list-style:none;}`

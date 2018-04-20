@@ -1,5 +1,5 @@
 module.exports = `/* CURSOR */
-.pointer{cursor: pointer;}
-.grab{cursor: grab;}
-.grabbing{cursor: grabbing;}
+.cu-pointer{cursor: pointer;}
+.cu-grab{cursor: grab;}
+.cu-grabbing{cursor: grabbing;}
 `

@@ -1,4 +1,4 @@
-module.exports = function align(query) {
+module.exports = function align (query) {
   return `/* ALIGN */
 .ta-i${query}{text-align:inherit;}
 .ta-c${query}{text-align:center;}

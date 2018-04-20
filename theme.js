@@ -7,11 +7,11 @@ var border = require('./border')
 var fill = require('./fill')
 var stroke = require('./stroke')
 var base = require('./base')
-var fontBase = base+'px'
+var fontBase = base + 'px'
 var fontName = 'Mark'
 module.exports = function theme (query) {
   query = query || ''
-  var output  = ''
+  var output = ''
   function append (string) {
     output += string + '\n'
   }
@@ -19,7 +19,7 @@ module.exports = function theme (query) {
   append('\n/* ----- THEME ----- */\n')
   append(variables())
   append(reset())
-  append(typeface(fontBase,fontName))
+  append(typeface(fontBase, fontName))
   append(colors(query))
   append(background(query))
   append(border(query))

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "customizable css lib",
   "main": "index.js",
-  "style":"cssmitten.css",
+  "style": "cssmitten.css",
   "scripts": {
     "build": "node ./index.js > ./cssmitten.css",
     "dist": "npm run build && postcss --no-map --use cssnano --use autoprefixer --autoprefixer.browsers '> 5%' -o ./cssmitten.min.css ./cssmitten.css",
@@ -26,5 +26,8 @@
     "autoprefixer": "^7.1.3",
     "cssnano-cli": "^1.0.5",
     "postcss-cli": "^4.1.0"
+  },
+  "dependencies": {
+    "modular-scale": "^5.1.0"
   }
 }
