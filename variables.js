@@ -5,9 +5,9 @@ module.exports = function variables () {
 :root {\n`
   var colors
   sections.forEach(function (section) {
-    colors = Object.keys(clrs[section])
+    colors = clrs[section]
     colors && colors.map(function (color, i) {
-      output += `  --${section}${i}:${clrs[section][color]};/* ${color} */\n`
+      output += `  --${section.charAt(0)}${i}:${color.value};/* ${color.label} */\n`
     })
   })
   output += `}\n`

@@ -1,15 +1,32 @@
-var clrs = require('./colors')
+var colors = require('./colors')
 module.exports = function stroke (query) {
-  var sections = Object.keys(clrs)
   var output = '/* STROKE */\n'
-  var colors
   var variable
-  sections.forEach(function (section) {
-    colors = Object.keys(clrs[section])
-    colors && colors.map(function (color, i) {
-      variable = section + i
-      output += `.s-${variable}${query}{stroke:var(--${variable});}/* ${color} */\n`
-    })
+  var primary = colors.primary || []
+  var hover = colors.hover || []
+  var active = colors.active || []
+  var disabled = colors.disabled || []
+
+  primary.forEach(function (color, i) {
+    variable = 'p' + i
+    output += `.s-${variable}${query}{stroke:var(--${variable});}/* ${color.label} */\n`
   })
+
+  hover.forEach(function (color, i) {
+    variable = 'h' + i
+    output += `.s-${variable}${query}:hover{stroke:var(--${variable});}/* ${color.label} */\n`
+  })
+
+  active.forEach(function (color, i) {
+    variable = 'a' + i
+    output += `.s-${variable}${query}:active{stroke:var(--${variable});}/* ${color.label} */\n`
+    output += `.s-${variable}${query}[active=active]{stroke:var(--${variable});}/* ${color.label} */\n`
+  })
+
+  disabled.forEach(function (color, i) {
+    variable = 'd' + i
+    output += `.s-${variable}${query}:disabled{stroke:var(--${variable});}/* ${color.label} */\n`
+  })
+
   return output
 }

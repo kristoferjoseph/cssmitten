@@ -1,7 +1,6 @@
-var clrs = require('./colors')
+var colors = require('./colors')
 var radius = require('./radius')
 module.exports = function border (query) {
-  var sections = Object.keys(clrs)
   var output = `/* BORDER */
 .b-none${query}{border:none;}
 .bt-none${query}{border-top:none;}
@@ -14,15 +13,33 @@ module.exports = function border (query) {
 .bb${query}{border-bottom: 1px solid;}
 .bl${query}{border-left: 1px solid;}
 `
-  var colors
   var variable
-  sections.forEach(function (section) {
-    colors = Object.keys(clrs[section])
-    colors.map(function (color, i) {
-      variable = section + i
-      output += `.b-${variable}${query}{border-color:var(--${variable});}/* ${color} */\n`
-    })
+  var primary = colors.primary || []
+  var hover = colors.hover || []
+  var active = colors.active || []
+  var disabled = colors.disabled || []
+
+  primary.forEach(function (color, i) {
+    variable = 'p' + i
+    output += `.b-${variable}${query}{border-color:var(--${variable});}/* ${color.label} */\n`
   })
+
+  hover.forEach(function (color, i) {
+    variable = 'h' + i
+    output += `.b-${variable}${query}:hover{border-color:var(--${variable});}/* ${color.label} */\n`
+  })
+
+  active.forEach(function (color, i) {
+    variable = 'a' + i
+    output += `.b-${variable}${query}:active{border-color:var(--${variable});}/* ${color.label} */\n`
+    output += `.b-${variable}${query}[active=active]{border-color:var(--${variable});}/* ${color.label} */\n`
+  })
+
+  disabled.forEach(function (color, i) {
+    variable = 'd' + i
+    output += `.b-${variable}${query}:disabled{border-color:var(--${variable});}/* ${color.label} */\n`
+  })
+
   output += radius(query)
   return output
 }
