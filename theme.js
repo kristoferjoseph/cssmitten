@@ -6,24 +6,22 @@ var background = require('./background')
 var border = require('./border')
 var fill = require('./fill')
 var stroke = require('./stroke')
-var base = require('./base')
-var fontBase = base + 'px'
-var fontName = 'Mark'
-module.exports = function theme (query) {
-  query = query || ''
+module.exports = function theme (config) {
+  config = config || {}
+  var query = config.query || ''
   var output = ''
   function append (string) {
     output += string + '\n'
   }
 
   append('\n/* ----- THEME ----- */\n')
-  append(variables())
+  append(variables({config}))
   append(reset())
-  append(typeface(fontBase, fontName))
-  append(colors(query))
-  append(background(query))
-  append(border(query))
-  append(fill(query))
-  append(stroke(query))
+  append(typeface({config}))
+  append(colors({config, query}))
+  append(background({config, query}))
+  append(border({config, query}))
+  append(fill({config, query}))
+  append(stroke({config, query}))
   return output
 }

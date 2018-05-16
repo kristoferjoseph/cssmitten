@@ -5,7 +5,6 @@ module.exports = function reset (query) {
 *:after {
   margin: 0;
   padding: 0;
-  background: inherit;
   border: none;
   box-sizing: border-box;
 }

@@ -1,6 +1,9 @@
-var colors = require('./colors')
 var radius = require('./radius')
-module.exports = function border (query) {
+module.exports = function border (state) {
+  state = state || {}
+  var query = state.query || ''
+  var config = state.config
+  var colors = config.colors
   var output = `/* BORDER */
 .b-none${query}{border:none;}
 .bt-none${query}{border-top:none;}
@@ -32,7 +35,7 @@ module.exports = function border (query) {
   active.forEach(function (color, i) {
     variable = 'a' + i
     output += `.b-${variable}${query}:active{border-color:var(--${variable});}/* ${color.label} */\n`
-    output += `.b-${variable}${query}[active=active]{border-color:var(--${variable});}/* ${color.label} */\n`
+    output += `.b-${variable}${query}.active{border-color:var(--${variable});}/* ${color.label} */\n`
   })
 
   disabled.forEach(function (color, i) {
@@ -40,6 +43,6 @@ module.exports = function border (query) {
     output += `.b-${variable}${query}:disabled{border-color:var(--${variable});}/* ${color.label} */\n`
   })
 
-  output += radius(query)
+  output += radius({config, query})
   return output
 }

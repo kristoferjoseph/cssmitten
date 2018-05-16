@@ -7,35 +7,38 @@ var padding = require('./padding')
 var overflow = require('./overflow')
 var visibility = require('./visibility')
 var media = require('./media')
-var queries = require('./queries')
+var defaults = require('./config')
 var utils = require('./utils')
 
-function cssmitten () {
-  var output = theme()
+module.exports = function cssmitten (config) {
+  config = config || defaults
+  var queries = config.queries
+  var output = theme(config)
   output += utils()
   output += cursor
-  output += styles()
+  output += styles({config})
 
   Object.keys(queries)
     .map(
       function (query) {
-        output += media(queries[query], styles(query))
+        output += media(queries[query], styles({config, query}))
       }
     )
 
   return output
 }
 
-function styles (query) {
+function styles (state) {
+  state = state || {}
+  var config = state.config || {}
+  var query = state.query
   query = query ? query = `-${query}` : ''
   return `
-${typography(query)}
+${typography({config, query})}
 ${layout(query)}
-${margin(query)}
-${padding(query)}
+${margin({config, query})}
+${padding({config, query})}
 ${overflow(query)}
 ${visibility(query)}
 `
 }
-
-console.log(cssmitten())

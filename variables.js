@@ -1,5 +1,7 @@
-var clrs = require('./colors')
-module.exports = function variables () {
+module.exports = function variables (state) {
+  state = state || {}
+  var config = state.config
+  var clrs = config.colors
   var sections = Object.keys(clrs)
   var output = `/* VARIABLES */
 :root {\n`

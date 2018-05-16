@@ -1,5 +1,8 @@
-var colors = require('./colors')
-module.exports = function fill (query) {
+module.exports = function fill (state) {
+  state = state || {}
+  var query = state.query || ''
+  var config = state.config
+  var colors = config.colors
   var output = `/* FILL */
 .f-none{fill:none;}
 `
@@ -22,7 +25,7 @@ module.exports = function fill (query) {
   active.forEach(function (color, i) {
     variable = 'a' + i
     output += `.f-${variable}${query}:active{fill:var(--${variable});}/* ${color.label} */\n`
-    output += `.f-${variable}${query}[active=active]{fill:var(--${variable});}/* ${color.label} */\n`
+    output += `.f-${variable}${query}.active{fill:var(--${variable});}/* ${color.label} */\n`
   })
 
   disabled.forEach(function (color, i) {

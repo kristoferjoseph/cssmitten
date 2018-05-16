@@ -1,6 +1,10 @@
-var scale = require('./scale')
+var Scale = require('./scale')
 var sds = require('./sides')
-module.exports = function sided (template) {
+module.exports = function sided (state) {
+  state = state || {}
+  var config = state.config
+  var template = state.template
+  var scale = Scale(config)
   var i = 0
   var l = scale.length
   var half = Math.floor(l * 0.5)

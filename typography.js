@@ -1,10 +1,14 @@
 var sizes = require('./sizes')
+var lineHeight = require('./line-height')
 var weights = require('./weights')
 var align = require('./align')
 var decoration = require('./decoration')
-module.exports = function typography (query) {
+module.exports = function typography (state) {
+  state = state || {}
+  var query = state.query || ''
   return `
-${sizes(query)}
+${sizes(state)}
+${lineHeight(state)}
 ${weights(query)}
 ${align(query)}
 ${decoration()}`

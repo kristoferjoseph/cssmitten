@@ -1,5 +1,8 @@
-var colors = require('./colors')
-module.exports = function background (query) {
+module.exports = function background (state) {
+  state = state || {}
+  var query = state.query || ''
+  var config = state.config
+  var colors = config.colors
   var output = `/* BACKGROUND */
 .bg-none{background-color:none;}
 `
@@ -22,7 +25,7 @@ module.exports = function background (query) {
   active.forEach(function (color, i) {
     variable = 'a' + i
     output += `.bg-${variable}${query}:active{background-color:var(--${variable});}/* ${color.label} */\n`
-    output += `.bg-${variable}${query}[active=active]{background-color:var(--${variable});}/* ${color.label} */\n`
+    output += `.bg-${variable}${query}.active{background-color:var(--${variable});}/* ${color.label} */\n`
   })
 
   disabled.forEach(function (color, i) {

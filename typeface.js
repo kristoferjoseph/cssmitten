@@ -1,4 +1,6 @@
-module.exports = function typeface (base, name) {
+module.exports = function typeface (state) {
+  state = state || {}
+  var base = state.base || 16
   return `/* TYPEFACE */
 html {font-size: ${base};}
 body {

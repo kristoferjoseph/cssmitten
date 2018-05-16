@@ -1,6 +1,9 @@
 var sided = require('./sided')
 var rems = require('./rems')
-module.exports = function margin (query) {
+module.exports = function margin (state) {
+  state = state || {}
+  var config = state.config
+  var query = state.query
   var output = `/* MARGIN */
 .m-none${query}{margin:none;}
 .mt-none${query}{margin-top:none;}
@@ -14,9 +17,12 @@ module.exports = function margin (query) {
 .mr-auto${query}{margin-right:auto;}
 .ml-auto${query}{margin-left:auto;}
 `
-  output += sided(function (label, step, side, value) {
+
+  function template (label, step, side, value) {
     side = side ? side = `-${side}` : ''
     return `.m${label}${step}${query}{margin${side}:${rems(value)};}\n`
-  })
+  }
+
+  output += sided({config, template})
   return output
 }

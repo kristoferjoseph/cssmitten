@@ -1,11 +1,14 @@
 {
-  "name": "cssmitten",
+  "name": "@smallwins/cssmitten",
   "version": "1.0.0",
   "description": "customizable css lib",
   "main": "index.js",
+  "bin": {
+    "cssmitten": "./cli.js"
+  },
   "style": "cssmitten.css",
   "scripts": {
-    "build": "node ./index.js > ./cssmitten.css",
+    "build": "node ./cli.js > ./cssmitten.css",
     "dist": "npm run build && postcss --no-map --use cssnano --use autoprefixer --autoprefixer.browsers '> 5%' -o ./cssmitten.min.css ./cssmitten.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,6 +31,7 @@
     "postcss-cli": "^4.1.0"
   },
   "dependencies": {
+    "chroma-js": "^1.3.6",
     "modular-scale": "^5.1.0"
   }
 }

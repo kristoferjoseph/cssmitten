@@ -1,5 +1,8 @@
-var colors = require('./colors')
-module.exports = function color (query) {
+module.exports = function color (state) {
+  state = state || {}
+  var query = state.query || ''
+  var config = state.config
+  var colors = config.colors
   var output = '\n/* COLOR */\n'
   var variable
   var primary = colors.primary || []
@@ -20,7 +23,7 @@ module.exports = function color (query) {
   active.forEach(function (color, i) {
     variable = 'a' + i
     output += `.c-${variable}${query}:active{color:var(--${variable});}/* ${color.label} */\n`
-    output += `.c-${variable}${query}[active=active]{color:var(--${variable});}/* ${color.label} */\n`
+    output += `.c-${variable}${query}.active{color:var(--${variable});}/* ${color.label} */\n`
   })
 
   disabled.forEach(function (color, i) {
