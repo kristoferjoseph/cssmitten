@@ -1,6 +1,6 @@
 {
   "name": "@smallwins/cssmitten",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "customizable css lib",
   "main": "index.js",
   "bin": {
