@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 var cssmitten = require('./')
-console.log(cssmitten())
+process.stdout.write(cssmitten())
