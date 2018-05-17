@@ -13,7 +13,7 @@ module.exports = function padding (state) {
  `
   function template (label, step, side, value) {
     side = side ? side = `-${side}` : ''
-    return `.p${label}${step}${query}{padding${side}:${rems(value)};}\n`
+    return `.p${label}${step}${query}{padding${side}:${rems({config, value})};}\n`
   }
 
   output += sided({config, template})

@@ -10,11 +10,11 @@ module.exports = function lineHeight (state) {
   var l = scale.length
   var half = Math.floor(l * 0.5)
   var step = half
-  var v
+  var value
   for (i; i < l; i++) {
     var s = step--
-    v = scale[i]
-    output += `.lh${s}${query}{line-height:${rems(v)};}\n`
+    value = scale[i]
+    output += `.lh${s}${query}{line-height:${rems({config, value})};}\n`
   }
   return output
 }

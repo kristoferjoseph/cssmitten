@@ -20,7 +20,7 @@ module.exports = function margin (state) {
 
   function template (label, step, side, value) {
     side = side ? side = `-${side}` : ''
-    return `.m${label}${step}${query}{margin${side}:${rems(value)};}\n`
+    return `.m${label}${step}${query}{margin${side}:${rems({config, value})};}\n`
   }
 
   output += sided({config, template})
