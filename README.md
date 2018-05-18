@@ -9,21 +9,34 @@ Customize and generate a simple css style guide.
 
 ## usage
 
-Customize `colors.js`, `scale.js`, `base.js`, `theme.js`, etc. then generate the `cssmitten.css` file:
+Customize `config.json` file then type:
 
 `npm run build`
+
+It will output to `cssmitten.css`
 
 Generate a minified version:
 
 `npm run dist`
 
+It will output to `cssmitten.min.css`
+
+To preview in the terminal type:
+
+`node ./cli.js`
+
+OR if you have npm 6.0+ installed
+
+`npx cssmitten`
+
+
 ## TODO
 
 - [ ] expose configuration
-  - [ ] base font size
-  - [ ] font stack
-  - [ ] scale
-  - [x] colors
+  - [x] base font size
+  - [ ] font stack
+  - [x] scale
+  - [x] colors
 
 - [ ] build customization website
   - [ ] change configuration
