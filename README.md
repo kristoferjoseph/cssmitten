@@ -20,10 +20,10 @@ Generate a minified version:
 ## TODO
 
 - [ ] expose configuration
-  - [ ] base font size
-  - [ ] font stack
-  - [ ] scale
-  - [ ] colors
+  - [x] base font size
+  - [ ] font stack
+  - [x] scale
+  - [x] colors
 
 - [ ] build customization website
   - [ ] change configuration
