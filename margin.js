@@ -10,10 +10,7 @@ module.exports = function margin (state) {
 .mr-none${query}{margin-right:none;}
 .mb-none${query}{margin-bottom:none;}
 .ml-none${query}{margin-left:none;}
-.m-auto${query}{
-  margin-right:auto;
-  margin-left:auto;
-}
+.m-auto${query}{margin-right:auto;margin-left:auto;}
 .mr-auto${query}{margin-right:auto;}
 .ml-auto${query}{margin-left:auto;}
 `

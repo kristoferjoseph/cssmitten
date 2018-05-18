@@ -7,8 +7,6 @@ var border = require('./border')
 var fill = require('./fill')
 var stroke = require('./stroke')
 module.exports = function theme (config) {
-  config = config || {}
-  var query = config.query || ''
   var output = ''
   function append (string) {
     output += string + '\n'
@@ -18,10 +16,10 @@ module.exports = function theme (config) {
   append(variables({config}))
   append(reset())
   append(typeface({config}))
-  append(colors({config, query}))
-  append(background({config, query}))
-  append(border({config, query}))
-  append(fill({config, query}))
-  append(stroke({config, query}))
+  append(colors({config}))
+  append(background({config}))
+  append(border({config}))
+  append(fill({config}))
+  append(stroke({config}))
   return output
 }

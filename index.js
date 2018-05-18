@@ -7,11 +7,11 @@ var padding = require('./padding')
 var overflow = require('./overflow')
 var visibility = require('./visibility')
 var media = require('./media')
-var defaults = require('./config')
 var utils = require('./utils')
 
 module.exports = function cssmitten (config) {
-  config = config || defaults
+  if (!config) { return }
+  config = JSON.parse(config)
   var queries = config.queries
   var output = theme(config)
   output += utils()
@@ -39,6 +39,5 @@ ${layout(query)}
 ${margin({config, query})}
 ${padding({config, query})}
 ${overflow(query)}
-${visibility(query)}
-`
+${visibility(query)}`
 }

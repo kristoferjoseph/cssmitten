@@ -43,6 +43,7 @@ module.exports = function border (state) {
     output += `.b-${variable}${query}:disabled{border-color:var(--${variable});}/* ${color.label} */\n`
   })
 
+  output += '\n'
   output += radius({config, query})
   return output
 }

@@ -10,7 +10,7 @@ module.exports = function padding (state) {
 .pr-none${query}{padding-right:none;}
 .pb-none${query}{padding-bottom:none;}
 .pl-none${query}{padding-left:none;}
- `
+`
   function template (label, step, side, value) {
     side = side ? side = `-${side}` : ''
     return `.p${label}${step}${query}{padding${side}:${rems({config, value})};}\n`

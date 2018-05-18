@@ -4,5 +4,6 @@ module.exports = function display (query) {
 .d-block${query}{display:block;}
 .d-inline-block${query}{display:block;}
 .d-flex${query}{display:flex;}
-.d-inline-flex${query}{display:inline-flex;}`
+.d-inline-flex${query}{display:inline-flex;}
+`
 }

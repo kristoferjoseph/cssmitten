@@ -3,7 +3,7 @@ module.exports = function background (state) {
   var query = state.query || ''
   var config = state.config
   var colors = config.colors
-  var output = `
+  var output = `/* BACKGROUND */
 .bg-none{background-color:none;}
 `
   var variable

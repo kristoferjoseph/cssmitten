@@ -1,6 +1,7 @@
 module.exports = function typeface (state) {
   state = state || {}
-  var base = state.base || 16
+  var config = state.config || {}
+  var base = config.base || 16
   return `/* TYPEFACE */
 html {font-size: ${base};}
 body {
