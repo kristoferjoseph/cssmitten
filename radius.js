@@ -4,6 +4,7 @@ module.exports = function radius (state) {
   var config = state.config
   var radii = config.radii
   var output = `/* RADIUS */
+.br-none${query}{border-radius:0;}
 .br-100${query}{border-radius:100%;}
 .br-tr0${query}{border-top-right-radius:0;}
 .br-br0${query}{border-bottom-right-radius:0;}

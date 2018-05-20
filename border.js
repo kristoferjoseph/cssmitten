@@ -6,15 +6,15 @@ module.exports = function border (state) {
   var colors = config.colors
   var output = `/* BORDER */
 .b-none${query}{border:none;}
-.bt-none${query}{border-top:none;}
-.br-none${query}{border-right:none;}
-.bb-none${query}{border-bottom:none;}
-.bl-none${query}{border-left:none;}
+.b-t-none${query}{border-top:none;}
+.b-r-none${query}{border-right:none;}
+.b-b-none${query}{border-bottom:none;}
+.b-l-none${query}{border-left:none;}
 .b${query}{border: 1px solid;}
-.bt${query}{border-top: 1px solid;}
-.br${query}{border-right: 1px solid;}
-.bb${query}{border-bottom: 1px solid;}
-.bl${query}{border-left: 1px solid;}
+.b-t${query}{border-top: 1px solid;}
+.b-r${query}{border-right: 1px solid;}
+.b-b${query}{border-bottom: 1px solid;}
+.b-l${query}{border-left: 1px solid;}
 `
   var variable
   var primary = colors.primary || []

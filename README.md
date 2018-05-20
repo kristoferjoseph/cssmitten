@@ -27,14 +27,13 @@ To preview in the terminal type:
 
 OR if you have npm 6.0+ installed
 
-`npx cssmitten`
+`npx cssmitten /path/to/your/config.json`
 
 
 ## TODO
 
-- [ ] expose configuration
+- [x] expose configuration
   - [x] base font size
-  - [ ] font stack
   - [x] scale
   - [x] colors
 
