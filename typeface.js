@@ -3,7 +3,7 @@ module.exports = function typeface (state) {
   var config = state.config || {}
   var base = config.base || 16
   return `/* TYPEFACE */
-html {font-size: ${base};}
+html {font-size: ${base}px;}
 body {
   font-weight: normal;
   line-height: 1.333;
