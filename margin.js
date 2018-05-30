@@ -5,11 +5,11 @@ module.exports = function margin (state) {
   var config = state.config
   var query = state.query
   var output = `/* MARGIN */
-.m-none${query}{margin:none;}
-.mt-none${query}{margin-top:none;}
-.mr-none${query}{margin-right:none;}
-.mb-none${query}{margin-bottom:none;}
-.ml-none${query}{margin-left:none;}
+.m-none${query}{margin:0;}
+.mt-none${query}{margin-top:0;}
+.mr-none${query}{margin-right:0;}
+.mb-none${query}{margin-bottom:0;}
+.ml-none${query}{margin-left:0;}
 .m-auto${query}{margin-right:auto;margin-left:auto;}
 .mr-auto${query}{margin-right:auto;}
 .ml-auto${query}{margin-left:auto;}

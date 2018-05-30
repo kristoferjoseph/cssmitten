@@ -5,11 +5,11 @@ module.exports = function padding (state) {
   var config = state.config
   var query = state.query
   var output = `/* PADDING */
-.p-none${query}{padding:none;}
-.pt-none${query}{padding-top:none;}
-.pr-none${query}{padding-right:none;}
-.pb-none${query}{padding-bottom:none;}
-.pl-none${query}{padding-left:none;}
+.p-none${query}{padding:0;}
+.pt-none${query}{padding-top:0;}
+.pr-none${query}{padding-right:0;}
+.pb-none${query}{padding-bottom:0;}
+.pl-none${query}{padding-left:0;}
 `
   function template (label, step, side, value) {
     side = side ? side = `-${side}` : ''
