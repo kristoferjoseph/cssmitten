@@ -27,10 +27,5 @@ input {font-family: inherit;}
   -webkit-appearance: none;
   width: 0;
 }
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background: var(--p3);
-  opacity: 0;
-}
 `
 }
