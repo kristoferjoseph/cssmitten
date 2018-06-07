@@ -22,10 +22,5 @@ select,
 textarea,
 button,
 input {font-family: inherit;}
-*:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px var(--p0) inset}
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 0;
-}
 `
 }
