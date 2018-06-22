@@ -1,5 +1,6 @@
 module.exports = function overflow (query) {
   return `/* OVERFLOW */
+.o-auto${query}{overflow:auto;-webkit-overflow-scrolling: touch;}
 .o-scroll${query}{overflow:scroll;-webkit-overflow-scrolling: touch;}
 .o-hidden${query}{overflow:hidden;}
 .o-scroll-x${query}{overflow-x:scroll;-webkit-overflow-scrolling: touch;}

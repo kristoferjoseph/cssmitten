@@ -59,11 +59,6 @@ select,
 textarea,
 button,
 input {font-family: inherit;}
-*:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px var(--p0) inset}
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 0;
-}
 
 /* TYPEFACE */
 html {font-size: 18px;}
@@ -507,6 +502,7 @@ body {
 .pl-5{padding-left:0.238rem;}
 
 /* OVERFLOW */
+.o-auto{overflow:auto;-webkit-overflow-scrolling: touch;}
 .o-scroll{overflow:scroll;-webkit-overflow-scrolling: touch;}
 .o-hidden{overflow:hidden;}
 .o-scroll-x{overflow-x:scroll;-webkit-overflow-scrolling: touch;}
@@ -732,6 +728,7 @@ body {
 .pl-5-lg{padding-left:0.238rem;}
 
 /* OVERFLOW */
+.o-auto-lg{overflow:auto;-webkit-overflow-scrolling: touch;}
 .o-scroll-lg{overflow:scroll;-webkit-overflow-scrolling: touch;}
 .o-hidden-lg{overflow:hidden;}
 .o-scroll-x-lg{overflow-x:scroll;-webkit-overflow-scrolling: touch;}
