@@ -15,5 +15,8 @@ module.exports = function flex (query) {
 .jc-c${query}{justify-content:center;}
 .fg-0${query}{flex-grow:0;}
 .fg-1${query}{flex-grow:1;}
+.fw-w${query}{flex-wrap: wrap;}
+.fw-wr${query}{flex-wrap: wrap-reverse;}
+.fw-nw${query}{flex-wrap: nowrap;}
 `
 }
