@@ -35,7 +35,7 @@ function styles (state) {
   query = query ? query = `-${query}` : ''
   return `
 ${typography({config, query})}
-${layout(query)}
+${layout({config, query})}
 ${margin({config, query})}
 ${padding({config, query})}
 ${overflow(query)}
