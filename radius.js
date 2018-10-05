@@ -6,6 +6,7 @@ module.exports = function radius (state) {
   var output = `/* RADIUS */
 .br-none${query}{border-radius:0;}
 .br-100${query}{border-radius:100%;}
+.br-pill${query}{border-radius:9999px;}
 .b.br-tr0${query}{border-top-right-radius:0;}
 .b.br-br0${query}{border-bottom-right-radius:0;}
 .b.br-tl0${query}{border-top-left-radius:0;}
