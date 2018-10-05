@@ -138,6 +138,26 @@
       }
     ]
   },
+  "gradient" : [
+    {
+      "label": "App1",
+      "type": "linear",
+      "direction": "45deg",
+      "stops": [ "#DB2476", "#8D30FF" ]
+    },
+    {
+      "label": "App2",
+      "type": "linear",
+      "direction": "45deg",
+      "stops": [ "#25A78B", "#7A43EE" ]
+    },
+    {
+      "label": "App3",
+      "type": "linear",
+      "direction": "45deg",
+      "stops": [ "#00A2C7", "#2C9B89" ]
+    }
+  ],
   "queries": {
     "lg": "48em"
   },
