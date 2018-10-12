@@ -16,6 +16,7 @@ module.exports = function width (state) {
 
   var output = `/* WIDTH */
 .w-0${query}{width:0;}
+.w-auto${query}{width:auto;}
 .w-100${query}{width:100%;}
 .vw-0${query}{width:0vw;}
 .vw-100${query}{width:100vw;}
