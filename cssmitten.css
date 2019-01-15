@@ -202,6 +202,7 @@ body {
 /* RADIUS */
 .br-none{border-radius:0;}
 .br-100{border-radius:100%;}
+.br-pill{border-radius:9999px;}
 .b.br-tr0{border-top-right-radius:0;}
 .b.br-br0{border-bottom-right-radius:0;}
 .b.br-tl0{border-top-left-radius:0;}
@@ -360,6 +361,7 @@ body {
 
 /* WIDTH */
 .w-0{width:0;}
+.w-auto{width:auto;}
 .w-100{width:100%;}
 .vw-0{width:0vw;}
 .vw-100{width:100vw;}
@@ -595,6 +597,7 @@ body {
 
 /* WIDTH */
 .w-0-lg{width:0;}
+.w-auto-lg{width:auto;}
 .w-100-lg{width:100%;}
 .vw-0-lg{width:0vw;}
 .vw-100-lg{width:100vw;}
