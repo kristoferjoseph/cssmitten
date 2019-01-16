@@ -1,10 +1,11 @@
 module.exports = function display (query) {
-  return `/* DISPLAY */
-.d-none${query}{display:none;}
-.d-block${query}{display:block;}
-.d-inline${query}{display:inline;}
-.d-inline-block${query}{display:inline-block;}
-.d-flex${query}{display:flex;}
-.d-inline-flex${query}{display:inline-flex;}
+  return `
+/* DISPLAY */
+.display-none${query}{display:none;}
+.display-block${query}{display:block;}
+.display-inline${query}{display:inline;}
+.display-inline-block${query}{display:inline-block;}
+.display-flex${query}{display:flex;}
+.display-inline-flex${query}{display:inline-flex;}
 `
 }

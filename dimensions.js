@@ -1,10 +1,11 @@
 module.exports = function dimensions (query) {
-  return `/* DIMENSIONS */
-.w-auto${query}{width: auto;}
-.h-auto${query}{height: auto;}
-.w-100${query}{width:100%;}
-.h-100${query}{height:100%;}
-.vw-100${query}{width:100vw;}
-.vh-100${query}{height:100vh;}
+  return `
+/* DIMENSIONS */
+.width-auto${query}{width: auto;}
+.height-auto${query}{height: auto;}
+.width-100${query}{width:100%;}
+.height-100${query}{height:100%;}
+.viewport-width-100${query}{width:100vw;}
+.viewport-height-100${query}{height:100vh;}
 `
 }

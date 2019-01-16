@@ -1,37 +1,21 @@
+const pseudo = require('./pseudo')
+
 module.exports = function fill (state) {
   state = state || {}
   var query = state.query || ''
   var config = state.config
   var colors = config.colors
-  var output = `/* FILL */
+  var output = `
+/* FILL */
 .f-none{fill:none;}
 `
-  var variable
-  var primary = colors.primary || []
-  var hover = colors.hover || []
-  var active = colors.active || []
-  var disabled = colors.disabled || []
+  function template (selector, variable, color, i) {
+    selector = selector || ''
+    variable = variable || ''
+    variable = variable + i
+    return `.fill-${variable}${query}${selector}{fill:var(--${variable});}/* ${color.label} */`
+  }
 
-  primary.forEach(function (color, i) {
-    variable = 'p' + i
-    output += `.f-${variable}${query}{fill:var(--${variable});}/* ${color.label} */\n`
-  })
-
-  hover.forEach(function (color, i) {
-    variable = 'h' + i
-    output += `.f-${variable}${query}:hover{fill:var(--${variable});}/* ${color.label} */\n`
-  })
-
-  active.forEach(function (color, i) {
-    variable = 'a' + i
-    output += `.f-${variable}${query}:active{fill:var(--${variable});}/* ${color.label} */\n`
-    output += `.f-${variable}${query}.active{fill:var(--${variable});}/* ${color.label} */\n`
-  })
-
-  disabled.forEach(function (color, i) {
-    variable = 'd' + i
-    output += `.f-${variable}${query}:disabled{fill:var(--${variable});}/* ${color.label} */\n`
-  })
-
+  output += pseudo({colors, template})
   return output
 }

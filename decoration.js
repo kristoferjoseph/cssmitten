@@ -1,6 +1,8 @@
 module.exports = function decoration () {
-  return `/* DECORATION */
-.td-n{text-decoration: none;}
-.td-u{text-decoration: underline;}
-.td-lt{text-decoration: line-through;}`
+  return `
+ /* DECORATION */
+.text-decoration-none{text-decoration: none;}
+.text-decoration-underline{text-decoration: underline;}
+.text-decoration-line-through{text-decoration: line-through;}
+`
 }

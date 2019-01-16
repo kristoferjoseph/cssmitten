@@ -1,37 +1,22 @@
+const pseudo = require('./pseudo')
+
 module.exports = function background (state) {
   state = state || {}
-  var query = state.query || ''
-  var config = state.config
-  var colors = config.colors
-  var output = `/* BACKGROUND */
-.bg-none{background-color:none;}
+  let query = state.query || ''
+  let config = state.config
+  let colors = config.colors
+  let output = `
+/* BACKGROUND */
+.background-color-none{background-color:none;}
 `
-  var variable
-  var primary = colors.primary || []
-  var hover = colors.hover || []
-  var active = colors.active || []
-  var disabled = colors.disabled || []
 
-  primary.forEach(function (color, i) {
-    variable = 'p' + i
-    output += `.bg-${variable}${query}{background-color:var(--${variable});}\n`
-  })
+  function template (selector, variable, color, i) {
+    selector = selector || ''
+    variable = variable || ''
+    variable = variable + i
+    return `.background-color-${variable}${query}${selector}{background-color:var(--${variable});}/* ${color.label} */`
+  }
 
-  hover.forEach(function (color, i) {
-    variable = 'h' + i
-    output += `.bg-${variable}${query}:hover{background-color:var(--${variable});}\n`
-  })
-
-  active.forEach(function (color, i) {
-    variable = 'a' + i
-    output += `.bg-${variable}${query}:active{background-color:var(--${variable});}\n`
-    output += `.bg-${variable}${query}.active{background-color:var(--${variable});}\n`
-  })
-
-  disabled.forEach(function (color, i) {
-    variable = 'd' + i
-    output += `.bg-${variable}${query}:disabled{background-color:var(--${variable});}\n`
-  })
-
+  output += pseudo({colors, template})
   return output
 }

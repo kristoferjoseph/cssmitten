@@ -1,70 +1,36 @@
-var hs = require('hash-switch')
-
 module.exports = function color (state) {
   state = state || {}
   var query = state.query || ''
   var config = state.config
   var colors = config.colors
   var output = '\n/* COLOR */\n'
-  var variable
-  var sm = hs({
-    'link': link,
-    'visited': visited,
-    'hover': hover,
-    'active': active,
-    'disabled': disabled
-  }, handler)
+  let primary = colors.primary || []
+  let hover = colors.hover || []
+  let active = colors.active || []
+  let visited = colors.visited || []
+  let disabled = colors.disabled || []
+  var classes = []
 
-  Object.keys(colors).forEach(k => sm(k, colors[k], k.charAt(0).toLowerCase()))
-
-  function handler (a, n) {
-    a = a || []
-    a.forEach(function (color, i) {
-      variable = `${n}${i}`
-      output += `.c-${variable}${query}{color:var(--${variable});}/* ${color.label} */\n`
-    })
+  function format (selector, variable, color, i) {
+    selector = selector || ''
+    variable = variable || ''
+    variable = variable + i
+    return `.color-${variable}${query}${selector}{color:var(--${variable});}/* ${color.label} */`
   }
 
-  function link (a) {
-    a = a || []
-    a.forEach(function (color, i) {
-      variable = 'l' + i
-      output += `.c-${variable}${query}:link{color:var(--${variable});}/* ${color.label} */\n`
-    })
-  }
+  classes = classes.concat(
+    primary.map(format.bind(null, '', '')),
+    primary.map(format.bind(null, ':link', '')),
+    hover.map(format.bind(null, '.hover', 'hover')),
+    hover.map(format.bind(null, ':hover', 'hover')),
+    active.map(format.bind(null, '.active', 'active')),
+    active.map(format.bind(null, ':active', 'active')),
+    visited.map(format.bind(null, '.visited', 'visited')),
+    visited.map(format.bind(null, ':visited', 'visited')),
+    disabled.map(format.bind(null, '.disabled', 'disabled')),
+    disabled.map(format.bind(null, ':disabled', 'disabled'))
+  )
 
-  function visited (a) {
-    a = a || []
-    a.forEach(function (color, i) {
-      variable = 'v' + i
-      output += `.c-${variable}${query}:visited{color:var(--${variable});}/* ${color.label} */\n`
-    })
-  }
-
-  function hover (a) {
-    a = a || []
-    a.forEach(function (color, i) {
-      variable = 'h' + i
-      output += `.c-${variable}${query}:hover{color:var(--${variable});}/* ${color.label} */\n`
-    })
-  }
-
-  function active (a) {
-    a = a || []
-    a.forEach(function (color, i) {
-      variable = 'a' + i
-      output += `.c-${variable}${query}:active{color:var(--${variable});}/* ${color.label} */\n`
-      output += `.c-${variable}${query}.active{color:var(--${variable});}/* ${color.label} */\n`
-    })
-  }
-
-  function disabled (a) {
-    a = a || []
-    a.forEach(function (color, i) {
-      variable = 'd' + i
-      output += `.c-${variable}${query}:disabled{color:var(--${variable});}/* ${color.label} */\n`
-    })
-  }
-
+  output += classes.join('\n')
   return output
 }
