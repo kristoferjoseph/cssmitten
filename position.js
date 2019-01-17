@@ -1,8 +1,9 @@
 module.exports = function position (query) {
-  return `/* POSITION */
-.p-static${query}{position:static;}
-.p-absolute${query}{position:absolute;}
-.p-relative${query}{position:relative;}
-.p-fixed${query}{position:fixed;}
+  return `
+/* POSITION */
+.position-static${query}{position:static;}
+.position-absolute${query}{position:absolute;}
+.position-relative${query}{position:relative;}
+.position-fixed${query}{position:fixed;}
 `
 }

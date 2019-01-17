@@ -15,26 +15,26 @@ module.exports = function height (state) {
   percents = percents ? percents.sort(ascending) : []
 
   var output = `/* HEIGHT */
-.h-0${query}{height:0;}
-.h-100${query}{height:100%;}
-.vh-0${query}{height:0vh;}
-.vh-100${query}{height:100vh;}
+.height-0${query}{height:0;}
+.height-100${query}{height:100%;}
+.viewport-height-0${query}{height:0vh;}
+.viewport-height-100${query}{height:100vh;}
 `
 
   mins.forEach(function (value, i) {
-    output += `.min-h${i + 1}${query}{min-height:${rems({config, value})};}\n`
+    output += `.min-height${i + 1}${query}{min-height:${rems({config, value})};}\n`
   })
 
   maxs.forEach(function (value, i) {
-    output += `.max-h${i + 1}${query}{max-height:${rems({config, value})};}\n`
+    output += `.max-height${i + 1}${query}{max-height:${rems({config, value})};}\n`
   })
 
   viewports.forEach(function (value, i) {
-    output += `.vh${i + 1}${query}{height:${value}vh;}`
+    output += `.viewport-height${i + 1}${query}{height:${value}vh;}`
   })
 
   percents.forEach(function (value) {
-    output += `.h${value}${query}{height:${value}%;}`
+    output += `.height${value}${query}{height:${value}%;}`
   })
 
   return output

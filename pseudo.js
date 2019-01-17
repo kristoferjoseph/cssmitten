@@ -10,7 +10,7 @@ module.exports = function Pseudo (state) {
     let visited = colors.visited || []
     let disabled = colors.disabled || []
     return [].concat(
-      primary.map(template.bind(null, '', '')),
+      primary.map(template.bind(null, '', 'primary')),
       hover.map(template.bind(null, '.hover', 'hover')),
       hover.map(template.bind(null, ':hover', 'hover')),
       active.map(template.bind(null, '.active', 'active')),

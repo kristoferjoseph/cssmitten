@@ -15,27 +15,27 @@ module.exports = function width (state) {
   percents = percents ? percents.sort(ascending) : []
 
   var output = `/* WIDTH */
-.w-0${query}{width:0;}
-.w-auto${query}{width:auto;}
-.w-100${query}{width:100%;}
-.vw-0${query}{width:0vw;}
-.vw-100${query}{width:100vw;}
+.width-0${query}{width:0;}
+.width-auto${query}{width:auto;}
+.width-100${query}{width:100%;}
+.vieport-width-0${query}{width:0vw;}
+.viewport-width-100${query}{width:100vw;}
 `
 
   mins.forEach(function (value, i) {
-    output += `.min-w${i + 1}${query}{min-width:${rems({config, value})};}\n`
+    output += `.min-width${i + 1}${query}{min-width:${rems({config, value})};}\n`
   })
 
   maxs.forEach(function (value, i) {
-    output += `.max-w${i + 1}${query}{max-width:${rems({config, value})};}\n`
+    output += `.max-width${i + 1}${query}{max-width:${rems({config, value})};}\n`
   })
 
   viewports.forEach(function (value, i) {
-    output += `.vw-${i + 1}${query}{width:${value}vw;}`
+    output += `.viewport-width-${i + 1}${query}{width:${value}vw;}`
   })
 
   percents.forEach(function (value) {
-    output += `.w-${value}${query}{width:${value}%;}`
+    output += `.width-${value}${query}{width:${value}%;}`
   })
 
   return output

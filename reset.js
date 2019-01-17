@@ -1,5 +1,6 @@
 module.exports = function reset (query) {
-  return `/* RESET */
+  return `
+/* RESET */
 *,
 *:before,
 *:after {

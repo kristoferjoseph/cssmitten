@@ -10,7 +10,7 @@ module.exports = function gradient (state) {
     var direction = entry.direction
     direction = direction ? direction + ', ' : ''
     var stops = entry.stops.join(', ')
-    output += `.bg-image${i}{background-image:${type}-gradient(${direction}${stops});}/* ${label} */\n`
+    output += `.background-image-gradient-${i}{background-image:${type}-gradient(${direction}${stops});}/* ${label} */\n`
   })
 
   return output

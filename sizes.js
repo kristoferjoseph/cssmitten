@@ -5,7 +5,9 @@ module.exports = function sizes (state) {
   var config = state.config
   var query = state.query
   var scale = Scale(config)
-  var output = '/* SIZES */\n'
+  var output = `
+/* SIZES */
+`
   var i = 0
   var l = scale.length
   var half = Math.floor(l * 0.5)
@@ -14,7 +16,7 @@ module.exports = function sizes (state) {
   for (i; i < l; i++) {
     var s = step--
     value = scale[i]
-    output += `.fs${s}${query}{font-size:${rems({config, value})};}\n`
+    output += `.font-size${s}${query}{font-size:${rems({config, value})};}\n`
   }
   return output
 }

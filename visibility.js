@@ -1,6 +1,7 @@
-module.exports = function overflow (query) {
-  return `/* VISIBILITY */
-.v-hidden${query}{visibility:hidden;}
-.v-visible${query}{visibility:visible;}
+module.exports = function visibility (query) {
+  return `
+/* VISIBILITY */
+.visibility-hidden${query}{visibility:hidden;}
+.visibility-visible${query}{visibility:visible;}
 `
 }
