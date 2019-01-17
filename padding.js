@@ -9,8 +9,8 @@ module.exports = function padding (state) {
 .padding-0${query}{padding:0;}
 .padding-top-0${query}{padding-top:0;}
 .padding-right-0${query}{padding-right:0;}
-.padding-bottom-0{query}{padding-bottom:0;}
-.padding-left-0{query}{padding-left:0;}
+.padding-bottom-0${query}{padding-bottom:0;}
+.padding-left-0${query}{padding-left:0;}
 `
   function template (label, step, side, value) {
     side = side ? side = `-${side}` : ''
