@@ -18,7 +18,7 @@ module.exports = function width (state) {
 .width-0${query}{width:0;}
 .width-auto${query}{width:auto;}
 .width-100${query}{width:100%;}
-.vieport-width-0${query}{width:0vw;}
+.viewport-width-0${query}{width:0vw;}
 .viewport-width-100${query}{width:100vw;}
 `
 

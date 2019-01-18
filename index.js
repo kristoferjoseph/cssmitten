@@ -8,6 +8,7 @@ var overflow = require('./overflow')
 var visibility = require('./visibility')
 var media = require('./media')
 var utils = require('./utils')
+var list = require('./list')
 
 module.exports = function cssmitten (config) {
   if (!config) { return }
@@ -15,7 +16,8 @@ module.exports = function cssmitten (config) {
   var queries = config.queries
   var output = theme(config)
   output += utils()
-  output += cursor
+  output += list()
+  output += cursor()
   output += styles({config})
 
   Object.keys(queries)
