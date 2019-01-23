@@ -14,9 +14,10 @@ module.exports = function width (state) {
   var percents = params.percent
   percents = percents ? percents.sort(ascending) : []
 
-  var output = `/* WIDTH */
-.width-0${query}{width:0;}
+  var output = `
+/* WIDTH */
 .width-auto${query}{width:auto;}
+.width-0${query}{width:0;}
 .width-100${query}{width:100%;}
 .viewport-width-0${query}{width:0vw;}
 .viewport-width-100${query}{width:100vw;}

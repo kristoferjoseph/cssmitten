@@ -14,7 +14,9 @@ module.exports = function height (state) {
   var percents = params.percent
   percents = percents ? percents.sort(ascending) : []
 
-  var output = `/* HEIGHT */
+  var output = `
+/* HEIGHT */
+.height-auto${query}{height:auto;}
 .height-0${query}{height:0;}
 .height-100${query}{height:100%;}
 .viewport-height-0${query}{height:0vh;}

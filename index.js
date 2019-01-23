@@ -12,7 +12,12 @@ var list = require('./list')
 
 module.exports = function cssmitten (config) {
   if (!config) { return }
-  config = JSON.parse(config)
+  try {
+    config = JSON.parse(config)
+  } catch (err) {
+    console.error(err)
+    return 'Error parsing config.json.'
+  }
   var queries = config.queries
   var output = theme(config)
   output += utils()

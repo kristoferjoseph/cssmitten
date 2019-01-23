@@ -5,12 +5,16 @@ module.exports = function Pseudo (state) {
 
   function classes (colors, template) {
     let primary = colors.primary || []
+    let secondary = colors.secondary || []
+    let brand = colors.brand || []
     let hover = colors.hover || []
     let active = colors.active || []
     let visited = colors.visited || []
     let disabled = colors.disabled || []
     return [].concat(
       primary.map(template.bind(null, '', 'primary')),
+      secondary.map(template.bind(null, '', 'secondary')),
+      brand.map(template.bind(null, '', 'brand')),
       hover.map(template.bind(null, '.hover', 'hover')),
       hover.map(template.bind(null, ':hover', 'hover')),
       active.map(template.bind(null, '.active', 'active')),
