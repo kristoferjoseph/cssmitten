@@ -4,7 +4,7 @@ module.exports = function background (state) {
   var config = state.config
   var colors = config.colors
   var output = `/* BACKGROUND */
-.bg-none{background-color:none;}
+.bg-unset{background-color:unset;}
 `
   var variable
   var primary = colors.primary || []
