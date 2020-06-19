@@ -5,7 +5,7 @@
     "steps": 10
   },
   "colors": {
-    "primary": [
+    "greyscale": [
       {
         "label": "transparent",
         "value": "transparent"
@@ -86,7 +86,17 @@
       }
     ]
   },
-  "gradient" : [
+  "gradient": [
+    {
+      "label": "outrun",
+      "type": "linear",
+      "direction": "0.4turn",
+      "stops": [
+        "#0100ca",
+        "#00e5ff",
+        "#f50057"
+      ]
+    }
   ],
   "queries": {
     "lg": "48em"

@@ -1,10 +1,11 @@
-var radius = require('./radius')
-module.exports = function border (state) {
-  state = state || {}
-  var query = state.query || ''
-  var config = state.config
-  var colors = config.colors
-  var output = `/* BORDER */
+const hs = require('hash-switch')
+const radius = require('./radius')
+
+module.exports = function border (state={}) {
+  const query = state.query || ''
+  const config = state.config
+  const colors = config.colors
+  let output = `/* BORDER */
 .b-none${query}{border:none;}
 .b-t-none${query}{border-top:none;}
 .b-r-none${query}{border-right:none;}
@@ -16,32 +17,50 @@ module.exports = function border (state) {
 .b-b${query}{border-bottom: 1px solid;}
 .b-l${query}{border-left: 1px solid;}
 `
-  var variable
-  var primary = colors.primary || []
-  var hover = colors.hover || []
-  var active = colors.active || []
-  var disabled = colors.disabled || []
+  const sm = hs({
+    'hover': hover,
+    'active': active,
+    'disabled': disabled
+  }, handler)
 
-  primary.forEach(function (color, i) {
-    variable = 'p' + i
-    output += `.b-${variable}${query}{border-color:var(--${variable});}/* ${color.label} */\n`
-  })
+  Object.keys(colors)
+    .forEach(k => sm(k, colors[k], k.charAt(0)
+      .toLowerCase()
+    )
+  )
 
-  hover.forEach(function (color, i) {
-    variable = 'h' + i
-    output += `.b-${variable}${query}:hover{border-color:var(--${variable});}/* ${color.label} */\n`
-  })
+  function handler (a, n) {
+    a = a || []
+    a.forEach((color, i) => {
+        let variable = `${n}${i}`
+        output += `.b-${variable}${query}{border-color:var(--${variable});}/* ${color.label} */\n`
+      })
+  }
 
-  active.forEach(function (color, i) {
-    variable = 'a' + i
-    output += `.b-${variable}${query}:active{border-color:var(--${variable});}/* ${color.label} */\n`
-    output += `.b-${variable}${query}.active{border-color:var(--${variable});}/* ${color.label} */\n`
-  })
+  function hover (a) {
+    a = a || []
+    a.forEach(function (color, i) {
+      variable = 'h' + i
+      output += `.b-${variable}${query}:hover{border-color:var(--${variable});}/* ${color.label} */\n`
+    })
+  }
 
-  disabled.forEach(function (color, i) {
-    variable = 'd' + i
-    output += `.b-${variable}${query}:disabled{border-color:var(--${variable});}/* ${color.label} */\n`
-  })
+  function active (a) {
+    a = a || []
+    a.forEach(function (color, i) {
+      variable = 'a' + i
+      output += `.b-${variable}${query}:active{border-color:var(--${variable});}/* ${color.label} */\n`
+      output += `.b-${variable}${query}.active{border-color:var(--${variable});}/* ${color.label} */\n`
+    })
+  }
+
+  function disabled (a) {
+    a = a || []
+    a.forEach(function (color, i) {
+      variable = 'd' + i
+      output += `.b-${variable}${query}:disabled{border-color:var(--${variable});}/* ${color.label} */\n`
+    })
+  }
 
   output += '\n'
   output += radius({config, query})

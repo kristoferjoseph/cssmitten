@@ -1,13 +1,11 @@
-var hs = require('hash-switch')
+const hs = require('hash-switch')
 
-module.exports = function color (state) {
-  state = state || {}
-  var query = state.query || ''
-  var config = state.config
-  var colors = config.colors
-  var output = '\n/* COLOR */\n'
-  var variable
-  var sm = hs({
+module.exports = function color (state={}) {
+  const query = state.query || ''
+  const config = state.config
+  const colors = config.colors
+  let output = '\n/* COLOR */\n'
+  const sm = hs({
     'link': link,
     'visited': visited,
     'hover': hover,
@@ -15,12 +13,16 @@ module.exports = function color (state) {
     'disabled': disabled
   }, handler)
 
-  Object.keys(colors).forEach(k => sm(k, colors[k], k.charAt(0).toLowerCase()))
+  Object.keys(colors)
+    .forEach(k => sm(k, colors[k], k.charAt(0)
+      .toLowerCase()
+    )
+  )
 
   function handler (a, n) {
     a = a || []
     a.forEach(function (color, i) {
-      variable = `${n}${i}`
+      let variable = `${n}${i}`
       output += `.c-${variable}${query}{color:var(--${variable});}/* ${color.label} */\n`
     })
   }
@@ -28,7 +30,7 @@ module.exports = function color (state) {
   function link (a) {
     a = a || []
     a.forEach(function (color, i) {
-      variable = 'l' + i
+      let variable = 'l' + i
       output += `.c-${variable}${query}:link{color:var(--${variable});}/* ${color.label} */\n`
     })
   }
@@ -36,7 +38,7 @@ module.exports = function color (state) {
   function visited (a) {
     a = a || []
     a.forEach(function (color, i) {
-      variable = 'v' + i
+      let variable = 'v' + i
       output += `.c-${variable}${query}:visited{color:var(--${variable});}/* ${color.label} */\n`
     })
   }
@@ -44,7 +46,7 @@ module.exports = function color (state) {
   function hover (a) {
     a = a || []
     a.forEach(function (color, i) {
-      variable = 'h' + i
+      let variable = 'h' + i
       output += `.c-${variable}${query}:hover{color:var(--${variable});}/* ${color.label} */\n`
     })
   }
@@ -52,7 +54,7 @@ module.exports = function color (state) {
   function active (a) {
     a = a || []
     a.forEach(function (color, i) {
-      variable = 'a' + i
+      let variable = 'a' + i
       output += `.c-${variable}${query}:active{color:var(--${variable});}/* ${color.label} */\n`
       output += `.c-${variable}${query}.active{color:var(--${variable});}/* ${color.label} */\n`
     })
@@ -61,7 +63,7 @@ module.exports = function color (state) {
   function disabled (a) {
     a = a || []
     a.forEach(function (color, i) {
-      variable = 'd' + i
+      let variable = 'd' + i
       output += `.c-${variable}${query}:disabled{color:var(--${variable});}/* ${color.label} */\n`
     })
   }
