@@ -14,7 +14,7 @@ module.exports = function lineHeight (state) {
   for (i; i < l; i++) {
     var s = step--
     value = scale[i]
-    output += `.lh${s}${query}{line-height:${rems({config, value})};}\n`
+    output += `.lh${s}${query}{line-height:${value})};}\n`
   }
   return output
 }
