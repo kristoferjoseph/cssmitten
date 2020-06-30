@@ -6,11 +6,8 @@
   },
   "grid": {
     "steps": 6,
-    "minmax": [
-      [
-        "8.888rem",
-        "auto"
-      ]
+    "heights": [
+      160
     ]
   },
   "colors": {
