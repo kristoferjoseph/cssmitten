@@ -312,11 +312,19 @@ body {
 
 
 /* POSITION */
+.sticky{position:sticky;}
 .static{position:static;}
 .absolute{position:absolute;}
 .relative{position:relative;}
 .fixed{position:fixed;}
 
+
+ /* POSITIONING */
+.top0{top:0;}
+.left0{left:0;}
+.right0{right:0;}
+.bottom0{bottom:0;}
+  
 
 /* DISPLAY */
 .hidden{display:none;}
@@ -330,19 +338,23 @@ body {
 
 
 /* WIDTH */
-.w0{width:0;}
-.w-auto{width:auto;}
-.w100{width:100%;}
-.vw0{width:0vw;}
-.vw100{width:100vw;}
+.w-0{width:0;}
+.w-full{width:100%;}
+.w-screen{width:100vw;}
+.min-w-0{min-width:0;}
+.min-w-full{min-width:100%;}
+.max-width-none{max-width:none;}
 
 
 /* HEIGHT */
-.h0{height:0;}
-.h-auto{height:auto;}
-.h100{height:100%;}
-.vh0{height:0vh;}
-.vh100{height:100vh;}
+.h-0{height:0;}
+.h-full{height:100%;}
+.h-screen{height:100vh;}
+.min-h-0{min-height:0;}
+.min-h-full{min-height:100%;}
+.min-h-screen{min-height:100vh;}
+.max-h-full{max-height:100%;}
+.max-h-screen{max-height:100vh;}
 
 
 /* FLEX */
@@ -736,11 +748,19 @@ body {
 
 
 /* POSITION */
+.sticky-lg{position:sticky;}
 .static-lg{position:static;}
 .absolute-lg{position:absolute;}
 .relative-lg{position:relative;}
 .fixed-lg{position:fixed;}
 
+
+ /* POSITIONING */
+.top0-lg{top:0;}
+.left0-lg{left:0;}
+.right0-lg{right:0;}
+.bottom0-lg{bottom:0;}
+  
 
 /* DISPLAY */
 .hidden-lg{display:none;}
@@ -754,19 +774,23 @@ body {
 
 
 /* WIDTH */
-.w0-lg{width:0;}
-.w-auto-lg{width:auto;}
-.w100-lg{width:100%;}
-.vw0-lg{width:0vw;}
-.vw100-lg{width:100vw;}
+.w-0-lg{width:0;}
+.w-full-lg{width:100%;}
+.w-screen-lg{width:100vw;}
+.min-w-0-lg{min-width:0;}
+.min-w-full-lg{min-width:100%;}
+.max-width-none-lg{max-width:none;}
 
 
 /* HEIGHT */
-.h0-lg{height:0;}
-.h-auto-lg{height:auto;}
-.h100-lg{height:100%;}
-.vh0-lg{height:0vh;}
-.vh100-lg{height:100vh;}
+.h-0-lg{height:0;}
+.h-full-lg{height:100%;}
+.h-screen-lg{height:100vh;}
+.min-h-0-lg{min-height:0;}
+.min-h-full-lg{min-height:100%;}
+.min-h-screen-lg{min-height:100vh;}
+.max-h-full-lg{max-height:100%;}
+.max-h-screen-lg{max-height:100vh;}
 
 
 /* FLEX */

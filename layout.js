@@ -1,4 +1,5 @@
 const position = require('./position')
+const positioning = require('./positioning')
 const display = require('./display')
 const width = require('./width')
 const height = require('./height')
@@ -11,6 +12,7 @@ module.exports = function layout(state={}) {
 /* -----  LAYOUT ----- */
 
 ${position(query)}
+${positioning(query)}
 ${display(query)}
 ${width(state)}
 ${height(state)}
