@@ -253,7 +253,7 @@ body {
 .tracking3{letter-spacing: 0.1em;}
 .tracking2{letter-spacing: 0.05em;}
 .tracking1{letter-spacing: 0.025em;}
-.tracking0{query}{letter-spacing: 0;}
+.tracking0{letter-spacing: 0;}
 .tracking-1{letter-spacing: -0.025em;}
 .tracking-2{letter-spacing: -0.05em;}
   
@@ -625,7 +625,7 @@ body {
 .tracking3-lg{letter-spacing: 0.1em;}
 .tracking2-lg{letter-spacing: 0.05em;}
 .tracking1-lg{letter-spacing: 0.025em;}
-.tracking0-lg{query}{letter-spacing: 0;}
+.tracking0-lg{letter-spacing: 0;}
 .tracking-1-lg{letter-spacing: -0.025em;}
 .tracking-2-lg{letter-spacing: -0.05em;}
   
