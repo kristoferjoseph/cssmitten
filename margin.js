@@ -3,8 +3,9 @@ var rems = require('./rems')
 module.exports = function margin (state) {
   state = state || {}
   var config = state.config
-  var query = state.query
-  var output = `/* MARGIN */
+  var query = state.label
+  var output = `
+/* MARGIN */
 .m-none${query}{margin:0;}
 .mt-none${query}{margin-top:0;}
 .mr-none${query}{margin-right:0;}

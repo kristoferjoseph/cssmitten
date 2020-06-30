@@ -1,25 +1,31 @@
-var rems = require('./rems')
-module.exports = function width (state) {
+const rems = require('./rems')
+
+module.exports = function width(state) {
   state = state || {}
   var config = state.config
-  var query = state.query
+  var query = state.label
   var ascending = (a, b) => a > b
   var params = config.width || {}
   var mins = params.mins
-  mins = mins ? mins.sort(ascending) : []
+    ? mins.sort(ascending)
+    : []
   var maxs = params.max
-  maxs = maxs ? maxs.sort(ascending) : []
+    ? maxs.sort(ascending)
+    : []
   var viewports = params.viewport
-  viewports = viewports ? viewports.sort(ascending) : []
+    ? viewports.sort(ascending)
+    : []
   var percents = params.percent
-  percents = percents ? percents.sort(ascending) : []
+    ? percents.sort(ascending)
+    : []
 
-  var output = `/* WIDTH */
-.w-0${query}{width:0;}
+  var output = `
+/* WIDTH */
+.w0${query}{width:0;}
 .w-auto${query}{width:auto;}
-.w-100${query}{width:100%;}
-.vw-0${query}{width:0vw;}
-.vw-100${query}{width:100vw;}
+.w100${query}{width:100%;}
+.vw0${query}{width:0vw;}
+.vw100${query}{width:100vw;}
 `
 
   mins.forEach(function (value, i) {

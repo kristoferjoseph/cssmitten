@@ -1,19 +1,18 @@
-var Scale = require('./scale')
-var sds = require('./sides')
-module.exports = function sided (state) {
-  state = state || {}
-  var config = state.config
-  var template = state.template
-  var scale = Scale(config)
-  var i = 0
-  var l = scale.length
-  var half = Math.floor(l * 0.5)
-  var step = half
-  var sides = Object.keys(sds)
-  var output = ''
-  var value
-  var side
-  for (i; i < l; i++) {
+const Scale = require('./scale')
+const sds = require('./sides')
+
+module.exports = function sided(state={}) {
+  let config = state.config
+  let template = state.template
+  let scale = Scale(config)
+  let l = scale.length
+  let half = Math.floor(l * 0.5)
+  let step = half
+  let sides = Object.keys(sds)
+  let output = ''
+  let value
+  let side
+  for (let i=0; i < l; i++) {
     var s = step--
     value = scale[i]
     output += template('', s, '', value)

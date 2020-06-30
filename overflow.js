@@ -1,11 +1,18 @@
 module.exports = function overflow (query) {
-  return `/* OVERFLOW */
-.o-auto${query}{overflow:auto;-webkit-overflow-scrolling: touch;}
-.o-scroll${query}{overflow:scroll;-webkit-overflow-scrolling: touch;}
-.o-hidden${query}{overflow:hidden;}
-.o-scroll-x${query}{overflow-x:scroll;-webkit-overflow-scrolling: touch;}
-.o-hidden-x${query}{overflow-x:hidden;}
-.o-scroll-y${query}{overflow-y:scroll;-webkit-overflow-scrolling: touch;}
-.o-hidden-y${query}{overflow-y:hidden;}
+  return `
+/* OVERFLOW */
+.overflow-auto${query}{overflow:auto;}
+.truncate,
+.overflow-hidden${query}{overflow:hidden;}
+.overflow-visible${query}{overflow:visible;}
+.overflow-scroll${query}{overflow:scroll;}
+.overflow-x-auto${query}{overflow-x:auto;}
+.overflow-y-auto${query}{overflow-y:auto;}
+.overflow-x-scroll${query}{overflow-x:scroll;}
+.overflow-x-hidden${query}{overflow-x:hidden;}
+.overflow-y-scroll${query}{overflow-y:scroll;}
+.overflow-y-hidden${query}{overflow-y:hidden;}
+.scrolling-touch${query}{webkit-overflow-scrolling:touch;}
+.scrolling-auto${query}{webkit-overflow-scrolling:auto;}
 `
 }

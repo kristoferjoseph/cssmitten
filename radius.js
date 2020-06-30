@@ -3,18 +3,19 @@ module.exports = function radius (state) {
   var query = state.query || ''
   var config = state.config
   var radii = config.radii
-  var output = `/* RADIUS */
-.br-none${query}{border-radius:0;}
-.br-100${query}{border-radius:100%;}
-.br-pill${query}{border-radius:9999px;}
-.b.br-tr0${query}{border-top-right-radius:0;}
-.b.br-br0${query}{border-bottom-right-radius:0;}
-.b.br-tl0${query}{border-top-left-radius:0;}
-.b.br-bl0${query}{border-bottom-left-radius:0;}
+  var output = `
+/* RADIUS */
+.radius-none${query}{border-radius:0;}
+.radius-100${query}{border-radius:100%;}
+.radius-pill${query}{border-radius:9999px;}
+.radius-tr-none${query}{border-top-right-radius:0;}
+.radius-br-none${query}{border-bottom-right-radius:0;}
+.radius-tl-none${query}{border-top-left-radius:0;}
+.radius-bl-none${query}{border-bottom-left-radius:0;}
 `
 
   radii.map(function (r, i) {
-    output += `.br${i}${query}{border-radius:${r}px;}\n`
+    output += `.radius${i}${query}{border-radius:${r}px;}\n`
   })
   return output
 }

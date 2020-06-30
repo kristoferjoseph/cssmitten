@@ -8,10 +8,6 @@ module.exports = function reset (query) {
   border: none;
   box-sizing: border-box;
 }
-*:focus {outline: none;}
-a {text-decoration: none;}
-li {list-style: none;}
-button {user-select: none;}
 img {max-width: 100%;}
 svg {
   width: 100%;

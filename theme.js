@@ -1,27 +1,25 @@
-var reset = require('./reset')
-var typeface = require('./typeface')
-var variables = require('./variables')
-var colors = require('./color')
-var background = require('./background')
-var gradient = require('./gradient')
-var border = require('./border')
-var fill = require('./fill')
-var stroke = require('./stroke')
-module.exports = function theme (config) {
-  var output = ''
-  function append (string) {
-    output += string + '\n'
-  }
+const reset = require('./reset')
+const typeface = require('./typeface')
+const variables = require('./variables')
+const colors = require('./color')
+const background = require('./background')
+const gradient = require('./gradient')
+const border = require('./border')
+const fill = require('./fill')
+const stroke = require('./stroke')
 
-  append('\n/* ----- THEME ----- */\n')
-  append(variables({config}))
-  append(reset())
-  append(typeface({config}))
-  append(colors({config}))
-  append(background({config}))
-  append(gradient({config}))
-  append(border({config}))
-  append(fill({config}))
-  append(stroke({config}))
-  return output
+module.exports = function theme(config) {
+
+  return `
+/* ----- THEME ----- */
+${variables({config})}
+${reset()}
+${typeface({config})}
+${colors({config})}
+${background({config})}
+${gradient({config})}
+${border({config})}
+${fill({config})}
+${stroke({config})}
+`
 }

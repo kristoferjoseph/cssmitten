@@ -1,5 +1,6 @@
-module.exports = `.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}`
+module.exports = `
+.truncate,
+.space-nowrap{white-space:nowrap;}
+.truncate,
+.ellipsis{text-overflow:ellipsis;}
+`

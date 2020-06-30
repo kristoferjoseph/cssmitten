@@ -1,24 +1,30 @@
-var rems = require('./rems')
-module.exports = function height (state) {
-  state = state || {}
-  var config = state.config
-  var query = state.query
-  var ascending = (a, b) => a > b
-  var params = config.height || {}
-  var mins = params.mins
-  mins = mins ? mins.sort(ascending) : []
-  var maxs = params.max
-  maxs = maxs ? maxs.sort(ascending) : []
-  var viewports = params.viewport
-  viewports = viewports ? viewports.sort(ascending) : []
-  var percents = params.percent
-  percents = percents ? percents.sort(ascending) : []
+const rems = require('./rems')
 
-  var output = `/* HEIGHT */
-.h-0${query}{height:0;}
-.h-100${query}{height:100%;}
-.vh-0${query}{height:0vh;}
-.vh-100${query}{height:100vh;}
+module.exports = function height(state={}) {
+  let config = state.config
+  let query = state.label
+  let ascending = (a, b) => a > b
+  let params = config.height || {}
+  let mins = params.mins
+    ? mins.sort(ascending)
+    : []
+  let maxs = params.max
+    ? maxs.sort(ascending)
+    : []
+  let viewports = params.viewport
+    ? viewports.sort(ascending)
+    : []
+  let percents = params.percent
+    ? percents.sort(ascending)
+    : []
+
+  let output = `
+/* HEIGHT */
+.h0${query}{height:0;}
+.h-auto${query}{height:auto;}
+.h100${query}{height:100%;}
+.vh0${query}{height:0vh;}
+.vh100${query}{height:100vh;}
 `
 
   mins.forEach(function (value, i) {

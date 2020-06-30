@@ -4,84 +4,103 @@
     "ratio": "perfectFourth",
     "steps": 10
   },
+  "grid": {
+    "steps": 6,
+    "minmax": [
+      [
+        "8.888rem",
+        "auto"
+      ]
+    ]
+  },
   "colors": {
-    "greyscale": [
+    "primary": [
       {
-        "label": "transparent",
-        "value": "transparent"
+        "label": "#0100ca",
+        "value": "#0100ca"
       },
       {
-        "label": "10",
+        "label": "#00e5ff",
+        "value": "#0100ca"
+      },
+      {
+        "label": "#f50057",
+        "value": "#f50057"
+      }
+    ],
+    "greyscale": [
+      {
+        "label": "#FBFBFB",
         "value": "#FBFBFB"
       },
       {
-        "label": "9",
+        "label": "#E5E5E5",
         "value": "#E5E5E5"
       },
       {
-        "label": "8",
+        "label": "#CFCFCF",
         "value": "#CFCFCF"
       },
       {
-        "label": "7",
+        "label": "#BABABA",
         "value": "#BABABA"
       },
       {
-        "label": "6",
+        "label": "#A4A4A4",
         "value": "#A4A4A4"
       },
       {
-        "label": "5",
+        "label": "#8E8E8E",
         "value": "#8E8E8E"
       },
       {
-        "label": "4",
+        "label": "#797979",
         "value": "#797979"
       },
       {
-        "label": "3",
+        "label": "#636363",
         "value": "#636363"
       },
       {
-        "label": "2",
+        "label": "#4D4D4D",
         "value": "#4D4D4D"
       },
       {
-        "label": "1",
+        "label": "#383838",
         "value": "#383838"
       },
       {
-        "label": "0",
+        "label": "#222222",
         "value": "#222222"
       }
     ],
     "hover": [
       {
-        "label": "8",
+        "label": "#CFCFCF",
         "value": "#CFCFCF"
       },
       {
-        "label": "7",
+        "label": "#BABABA",
         "value": "#BABABA"
       }
     ],
     "active": [
       {
-        "label": "6",
+        "label": "#A4A4A4",
         "value": "#A4A4A4"
       },
       {
-        "label": "5",
+        "label": "#8E8E8E",
         "value": "#8E8E8E"
       }
     ],
     "disabled": [
       {
-        "label": "4",
+        "label": "#797979",
         "value": "#797979"
       },
       {
-        "label": "3",
+        "label": "#636363",
         "value": "#636363"
       }
     ]
@@ -100,6 +119,16 @@
   ],
   "queries": {
     "lg": "48em"
+  },
+  "borders": {
+    "widths": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ]
   },
   "radii": [
     4,

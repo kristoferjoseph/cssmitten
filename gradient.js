@@ -1,15 +1,16 @@
-module.exports = function gradient (state) {
-  state = state || {}
-  var config = state.config
-  var gradients = config.gradient || []
-  var output = '\n/* GRADIENT */\n'
+module.exports = function gradient(state={}) {
+  let config = state.config
+  let gradients = config.gradient || []
+  let output = `
+  /* GRADIENT */`
 
   gradients.forEach(function (entry, i) {
-    var label = entry.label
-    var type = entry.type
-    var direction = entry.direction
-    direction = direction ? direction + ', ' : ''
-    var stops = entry.stops.join(', ')
+    let label = entry.label
+    let type = entry.type
+    let direction = entry.direction
+      ? entry.direction + ', '
+      : ''
+    let stops = entry.stops.join(', ')
     output += `.bg-image${i}{background-image:${type}-gradient(${direction}${stops});}/* ${label} */\n`
   })
 

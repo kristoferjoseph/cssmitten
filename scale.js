@@ -1,11 +1,11 @@
-var modularScale = require('modular-scale')
-module.exports = function scale (config) {
-  config = config || {}
-  var base = config.base || 16
-  var scale = config.scale || {}
-  var ratio = scale.ratio || modularScale.ratios.perfectFourth
-  var steps = scale.steps || 8
-  var ms = modularScale({
+const modularScale = require('modular-scale')
+
+module.exports = function scale(config={}) {
+  let base = config.base || 16
+  let scale = config.scale || {}
+  let ratio = scale.ratio || modularScale.ratios.perfectFourth
+  let steps = scale.steps || 8
+  let ms = modularScale({
     ratio: ratio,
     base: base
   })

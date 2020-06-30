@@ -1,20 +1,21 @@
-var Scale = require('./scale')
-var rems = require('./rems')
-module.exports = function sizes (state) {
-  state = state || {}
-  var config = state.config
-  var query = state.query
-  var scale = Scale(config)
-  var output = '/* SIZES */\n'
-  var i = 0
-  var l = scale.length
-  var half = Math.floor(l * 0.5)
-  var step = half
-  var value
-  for (i; i < l; i++) {
-    var s = step--
+const Scale = require('./scale')
+const rems = require('./rems')
+
+module.exports = function sizes(state={}) {
+  let config = state.config
+  let query = state.label
+  let scale = Scale(config)
+  let output = `
+/* SIZES */
+`
+  let l = scale.length
+  let half = Math.floor(l * 0.5)
+  let step = half
+  let value
+  for (let i=0; i < l; i++) {
+    let s = step--
     value = scale[i]
-    output += `.fs${s}${query}{font-size:${rems({config, value})};}\n`
+    output += `.text${s}${query}{font-size:${rems({config, value})};}/* ${value}px */ \n`
   }
   return output
 }

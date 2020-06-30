@@ -1,10 +1,11 @@
-var sided = require('./sided')
-var rems = require('./rems')
-module.exports = function padding (state) {
-  state = state || {}
-  var config = state.config
-  var query = state.query
-  var output = `/* PADDING */
+const sided = require('./sided')
+const rems = require('./rems')
+
+module.exports = function padding(state={}) {
+  let config = state.config
+  let query = state.label
+  let output = `
+/* PADDING */
 .p-none${query}{padding:0;}
 .pt-none${query}{padding-top:0;}
 .pr-none${query}{padding-right:0;}

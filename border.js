@@ -1,22 +1,30 @@
 const hs = require('hash-switch')
 const radius = require('./radius')
 
-module.exports = function border (state={}) {
+module.exports = function border(state={}) {
   const query = state.query || ''
   const config = state.config
   const colors = config.colors
-  let output = `/* BORDER */
-.b-none${query}{border:none;}
-.b-t-none${query}{border-top:none;}
-.b-r-none${query}{border-right:none;}
-.b-b-none${query}{border-bottom:none;}
-.b-l-none${query}{border-left:none;}
-.b${query}{border: 1px solid;}
-.b-t${query}{border-top: 1px solid;}
-.b-r${query}{border-right: 1px solid;}
-.b-b${query}{border-bottom: 1px solid;}
-.b-l${query}{border-left: 1px solid;}
+  const widths = (config.borders &&
+    config.borders.widths || [1])
+  widths.unshift(0)
+  let output = `
+/* BORDER */
+.border-none${query}{border:none;}
+.border-t-none${query}{border-top:none;}
+.border-r-none${query}{border-right:none;}
+.border-b-none${query}{border-bottom:none;}
+.border-l-none${query}{border-left:none;}
 `
+  widths.map(function (w, i) {
+    output += `
+.border${i}${query}{border-width:${w}px;}
+.border-t${i}${query}{border-top-width:${w}px;}
+.border-r${i}${query}{border-right-width:${w}px;}
+.border-b${i}${query}{border-bottom-width:${w}px;}
+.border-l${i}${query}{border-left-width:${w}px;}`
+  })
+
   const sm = hs({
     'hover': hover,
     'active': active,
@@ -33,7 +41,7 @@ module.exports = function border (state={}) {
     a = a || []
     a.forEach((color, i) => {
         let variable = `${n}${i}`
-        output += `.b-${variable}${query}{border-color:var(--${variable});}/* ${color.label} */\n`
+        output += `.border-${variable}${query}{border-color:var(--${variable});}/* ${color.label} */`
       })
   }
 
@@ -41,7 +49,7 @@ module.exports = function border (state={}) {
     a = a || []
     a.forEach(function (color, i) {
       variable = 'h' + i
-      output += `.b-${variable}${query}:hover{border-color:var(--${variable});}/* ${color.label} */\n`
+      output += `.border-${variable}${query}:hover{border-color:var(--${variable});}/* ${color.label} */\n`
     })
   }
 
@@ -49,8 +57,8 @@ module.exports = function border (state={}) {
     a = a || []
     a.forEach(function (color, i) {
       variable = 'a' + i
-      output += `.b-${variable}${query}:active{border-color:var(--${variable});}/* ${color.label} */\n`
-      output += `.b-${variable}${query}.active{border-color:var(--${variable});}/* ${color.label} */\n`
+      output += `.border-${variable}${query}:active{border-color:var(--${variable});}/* ${color.label} */\n`
+      output += `.border-${variable}${query}.active{border-color:var(--${variable});}/* ${color.label} */\n`
     })
   }
 
@@ -58,7 +66,7 @@ module.exports = function border (state={}) {
     a = a || []
     a.forEach(function (color, i) {
       variable = 'd' + i
-      output += `.b-${variable}${query}:disabled{border-color:var(--${variable});}/* ${color.label} */\n`
+      output += `.border-${variable}${query}:disabled{border-color:var(--${variable});}/* ${color.label} */\n`
     })
   }
 

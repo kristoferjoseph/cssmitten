@@ -1,6 +1,9 @@
-var truncate = require('./truncate')
-module.exports = function utils () {
-  var output = '\n/* UTILS */\n'
+const truncate = require('./truncate')
+
+module.exports = function utils() {
+  var output = `
+/* UTILS */
+`
   output += truncate
   return output
 }

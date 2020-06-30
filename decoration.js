@@ -1,6 +1,8 @@
-module.exports = function decoration () {
-  return `/* DECORATION */
-.td-n{text-decoration: none;}
-.td-u{text-decoration: underline;}
-.td-lt{text-decoration: line-through;}`
+module.exports = function decoration(query='') {
+  return `
+/* DECORATION */
+.no-underline${query}{text-decoration:none;}
+.underline${query}{text-decoration:underline;}
+.line-through${query}{text-decoration:line-through;}
+  `
 }

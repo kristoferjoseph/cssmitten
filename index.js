@@ -1,21 +1,27 @@
-var theme = require('./theme')
-var typography = require('./typography')
-var cursor = require('./cursor')
-var layout = require('./layout')
-var margin = require('./margin')
-var padding = require('./padding')
-var overflow = require('./overflow')
-var visibility = require('./visibility')
-var media = require('./media')
-var utils = require('./utils')
+const theme = require('./theme')
+const typography = require('./typography')
+const cursor = require('./cursor')
+const layout = require('./layout')
+const margin = require('./margin')
+const padding = require('./padding')
+const overflow = require('./overflow')
+const visibility = require('./visibility')
+const objectFit = require('./object-fit')
+const objectPosition = require('./object-position')
+const outline = require('./outline')
+const container = require('./container')
+const media = require('./media')
+const userSelect = require('./user-select')
 
-module.exports = function cssmitten (config) {
-  if (!config) { return }
-  config = JSON.parse(config)
-  var queries = config.queries
-  var output = theme(config)
-  output += utils()
-  output += cursor
+module.exports = function cssmitten (props) {
+  let config
+  try {
+    config = JSON.parse(props)
+  } catch(err) {
+    throw new Error('Unable to parse config.json')
+  }
+  let queries = config.queries
+  let output = theme(config)
   output += styles({config})
 
   Object.keys(queries)
@@ -28,16 +34,25 @@ module.exports = function cssmitten (config) {
   return output
 }
 
-function styles (state) {
-  state = state || {}
-  var config = state.config || {}
-  var query = state.query
-  query = query ? query = `-${query}` : ''
+function styles (state={}) {
+  let config = state.config || {}
+  let queries = config.queries || {}
+  let query = state.query || ''
+  let label = query
+    ? `-${query}`
+    : ''
+  let width = queries[query]
   return `
-${typography({config, query})}
-${layout({config, query})}
-${margin({config, query})}
-${padding({config, query})}
-${overflow(query)}
-${visibility(query)}`
+${container({width, label})}
+${typography({config, label})}
+${layout({config, label})}
+${margin({config, label})}
+${padding({config, label})}
+${overflow(label)}
+${visibility(label)}
+${objectFit(label)}
+${objectPosition(label)}
+${outline(label)}
+${userSelect(label)}
+`
 }

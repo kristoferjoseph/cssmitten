@@ -1,15 +1,20 @@
-var position = require('./position')
-var display = require('./display')
-var width = require('./width')
-var height = require('./height')
-var flex = require('./flex')
-module.exports = function layout (state) {
-  state = state || {}
-  var query = state.query
-  return `\n/* -----  LAYOUT ----- */\n
+const position = require('./position')
+const display = require('./display')
+const width = require('./width')
+const height = require('./height')
+const flex = require('./flex')
+const grid = require('./grid')
+
+module.exports = function layout(state={}) {
+  let query = state.label
+  return `
+/* -----  LAYOUT ----- */
+
 ${position(query)}
 ${display(query)}
 ${width(state)}
 ${height(state)}
-${flex(query)}`
+${flex(query)}
+${grid(state)}
+`
 }
