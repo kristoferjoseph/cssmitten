@@ -9,25 +9,13 @@ Customize and generate a simple css style guide.
 
 ## usage
 
-Customize `config.json` file then type:
+Add a `config.json` file to your project
 
-`npm run build`
+Add a run script to your `package.json` file
+"styles": "`npx cssmitten ./path/to/your/config.json` > ./path/to/styles.css"
 
-It will output to `cssmitten.css`
+then type `npm run styles`
 
-Generate a minified version:
-
-`npm run dist`
-
-It will output to `cssmitten.min.css`
-
-To preview in the terminal type:
-
-`node ./cli.js`
-
-OR if you have npm 6.0+ installed
-
-`npx cssmitten /path/to/your/config.json`
 
 
 ## TODO
