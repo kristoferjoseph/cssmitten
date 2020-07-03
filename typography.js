@@ -9,6 +9,7 @@ const family = require('./family')
 const list = require('./list')
 const whitespace = require('./white-space')
 const wordbreak = require('./word-break')
+const transform = require('./transform')
 
 module.exports = function typography(state={}) {
   let query = state.label || ''
@@ -19,6 +20,7 @@ ${style(query)}
 ${lineHeight(query)}
 ${tracking(query)}
 ${weights(query)}
+${transform(query)}
 ${align(query)}
 ${decoration(query)}
 ${list(query)}
