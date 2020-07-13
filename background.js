@@ -22,8 +22,8 @@ module.exports = function background(state={}) {
 .bg-no-repeat${query}{background-repeat:no-repeat;}
 .bg-repeat-x${query}{background-repeat:repeat-x;}
 .bg-repeat-y${query}{background-repeat:repeat-y;}
-.bg-repeat-round${query}{background-repeat:repeat-round;}
-.bg-repeat-space${query}{background-repeat:repeat-space;}
+.bg-repeat-round${query}{background-repeat:round;}
+.bg-repeat-space${query}{background-repeat:space;}
 .bg-auto${query}{background-size:auto;}
 .bg-cover${query}{background-size:cover;}
 .bg-contain${query}{background-size:contain;}

@@ -20,7 +20,7 @@ module.exports = function grid(state={}) {
 .rows-none${query}{grid-template-rows:none;}
 `
 
-  for (let i=0; i<gridSteps; i++) {
+  for (let i=1; i<gridSteps+1; i++) {
     output += `.col-${i}${query}{grid-template-columns:repeat(${i}, minmax(0, 1fr));}\n`
     output += `.col-span-${i}${query}{grid-column: span ${i} / span ${i};}\n`
     output += `.col-start-${i}${query}{grid-column-start: ${i};}\n`
