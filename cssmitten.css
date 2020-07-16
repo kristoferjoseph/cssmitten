@@ -399,6 +399,15 @@ body {
 .flex-wrap{flex-wrap:wrap;}
 .flex-wrap-reverse{flex-wrap:wrap-reverse;}
 .flex-no-wrap{flex-wrap:nowrap;}
+.order-first{order:-9999;}
+.order-last{order:9999;}
+.order-none{order:0;}
+.order-1{order:1;}
+.order-2{order:2;}
+.order-3{order:3;}
+.order-4{order:4;}
+.order-5{order:5;}
+.order-6{order:6;}
 
 
 /* GRID */
@@ -842,6 +851,15 @@ body {
 .flex-wrap-lg{flex-wrap:wrap;}
 .flex-wrap-reverse-lg{flex-wrap:wrap-reverse;}
 .flex-no-wrap-lg{flex-wrap:nowrap;}
+.order-first-lg{order:-9999;}
+.order-last-lg{order:9999;}
+.order-none-lg{order:0;}
+.order-1-lg{order:1;}
+.order-2-lg{order:2;}
+.order-3-lg{order:3;}
+.order-4-lg{order:4;}
+.order-5-lg{order:5;}
+.order-6-lg{order:6;}
 
 
 /* GRID */
