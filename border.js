@@ -10,7 +10,11 @@ module.exports = function border(state={}) {
   widths.unshift(0)
   let output = `
 /* BORDER */
-.border-none${query}{border:none;}
+.border-solid${query}{border-style:solid;}
+.border-dashed${query}{border-style:dashed;}
+.border-dotted${query}{border-style:dotted;}
+.border-double${query}{border-style:double;}
+.border-none${query}{border-style:none;}
 .border-t-none${query}{border-top:none;}
 .border-r-none${query}{border-right:none;}
 .border-b-none${query}{border-bottom:none;}

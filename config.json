@@ -13,16 +13,28 @@
   "colors": {
     "primary": [
       {
-        "label": "#0100ca",
-        "value": "#0100ca"
+        "label": "Medium Aquamarine light",
+        "value": "#2CDD93"
       },
       {
-        "label": "#00e5ff",
-        "value": "#0100ca"
+        "label": "Bright Navy Blue light",
+        "value": "#1F74D6"
       },
       {
-        "label": "#f50057",
-        "value": "#f50057"
+        "label": "Royal Purple light",
+        "value": "hsl(267, 50%, 55%)"
+      },
+      {
+        "label": "Barbie Pink light",
+        "value": "#E21893"
+      },
+      {
+        "label": "Bittersweet Orange light",
+        "value": "#FF6263"
+      },
+      {
+        "label": "Royal purple",
+        "value": "hsl(267, 75%, 45%)"
       }
     ],
     "greyscale": [
@@ -73,12 +85,28 @@
     ],
     "hover": [
       {
-        "label": "#CFCFCF",
-        "value": "#CFCFCF"
+        "label": "Medium Aquamarine",
+        "value": "#3EE09C"
       },
       {
-        "label": "#BABABA",
-        "value": "#BABABA"
+        "label": "Bright Navy Blue",
+        "value": "#2a80e0"
+      },
+      {
+        "label": "Royal Purple Hover",
+        "value": "hsl(267, 90%, 55%)"
+      },
+      {
+        "label": "Barbie Pink",
+        "value": "#DE1792"
+      },
+      {
+        "label": "Bittersweet Orange",
+        "value": "#FF4747"
+      },
+      {
+        "label": "Minion Yellow",
+        "value": "#FAE05D"
       }
     ],
     "active": [

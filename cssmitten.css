@@ -2,9 +2,12 @@
 /* ----- THEME ----- */
 /* VARIABLES */
 :root {
-  --p0:#0100ca;/* #0100ca */
-  --p1:#0100ca;/* #00e5ff */
-  --p2:#f50057;/* #f50057 */
+  --p0:#2CDD93;/* Medium Aquamarine light */
+  --p1:#1F74D6;/* Bright Navy Blue light */
+  --p2:hsl(267, 50%, 55%);/* Royal Purple light */
+  --p3:#E21893;/* Barbie Pink light */
+  --p4:#FF6263;/* Bittersweet Orange light */
+  --p5:hsl(267, 75%, 45%);/* Royal purple */
   --g0:#FBFBFB;/* #FBFBFB */
   --g1:#E5E5E5;/* #E5E5E5 */
   --g2:#CFCFCF;/* #CFCFCF */
@@ -16,8 +19,12 @@
   --g8:#4D4D4D;/* #4D4D4D */
   --g9:#383838;/* #383838 */
   --g10:#222222;/* #222222 */
-  --h0:#CFCFCF;/* #CFCFCF */
-  --h1:#BABABA;/* #BABABA */
+  --h0:#3EE09C;/* Medium Aquamarine */
+  --h1:#2a80e0;/* Bright Navy Blue */
+  --h2:hsl(267, 90%, 55%);/* Royal Purple Hover */
+  --h3:#DE1792;/* Barbie Pink */
+  --h4:#FF4747;/* Bittersweet Orange */
+  --h5:#FAE05D;/* Minion Yellow */
   --a0:#A4A4A4;/* #A4A4A4 */
   --a1:#8E8E8E;/* #8E8E8E */
   --d0:#797979;/* #797979 */
@@ -59,9 +66,12 @@ body {
 /* COLOR */
 .text-current{color:currentColor;}/* current color */
 .text-transparent{color:transparent;}/* transparent */
-.text-p0{color:var(--p0);}/* #0100ca */
-.text-p1{color:var(--p1);}/* #00e5ff */
-.text-p2{color:var(--p2);}/* #f50057 */
+.text-p0{color:var(--p0);}/* Medium Aquamarine light */
+.text-p1{color:var(--p1);}/* Bright Navy Blue light */
+.text-p2{color:var(--p2);}/* Royal Purple light */
+.text-p3{color:var(--p3);}/* Barbie Pink light */
+.text-p4{color:var(--p4);}/* Bittersweet Orange light */
+.text-p5{color:var(--p5);}/* Royal purple */
 .text-g0{color:var(--g0);}/* #FBFBFB */
 .text-g1{color:var(--g1);}/* #E5E5E5 */
 .text-g2{color:var(--g2);}/* #CFCFCF */
@@ -73,8 +83,12 @@ body {
 .text-g8{color:var(--g8);}/* #4D4D4D */
 .text-g9{color:var(--g9);}/* #383838 */
 .text-g10{color:var(--g10);}/* #222222 */
-.text-h0:hover{color:var(--h0);}/* #CFCFCF */
-.text-h1:hover{color:var(--h1);}/* #BABABA */
+.text-h0:hover{color:var(--h0);}/* Medium Aquamarine */
+.text-h1:hover{color:var(--h1);}/* Bright Navy Blue */
+.text-h2:hover{color:var(--h2);}/* Royal Purple Hover */
+.text-h3:hover{color:var(--h3);}/* Barbie Pink */
+.text-h4:hover{color:var(--h4);}/* Bittersweet Orange */
+.text-h5:hover{color:var(--h5);}/* Minion Yellow */
 .text-a0:active{color:var(--a0);}/* #A4A4A4 */
 .text-a0.active{color:var(--a0);}/* #A4A4A4 */
 .text-a1:active{color:var(--a1);}/* #8E8E8E */
@@ -109,6 +123,9 @@ body {
 .bg-p0{background-color:var(--p0);}
 .bg-p1{background-color:var(--p1);}
 .bg-p2{background-color:var(--p2);}
+.bg-p3{background-color:var(--p3);}
+.bg-p4{background-color:var(--p4);}
+.bg-p5{background-color:var(--p5);}
 .bg-g0{background-color:var(--g0);}
 .bg-g1{background-color:var(--g1);}
 .bg-g2{background-color:var(--g2);}
@@ -122,6 +139,10 @@ body {
 .bg-g10{background-color:var(--g10);}
 .bg-h0:hover{background-color:var(--h0);}
 .bg-h1:hover{background-color:var(--h1);}
+.bg-h2:hover{background-color:var(--h2);}
+.bg-h3:hover{background-color:var(--h3);}
+.bg-h4:hover{background-color:var(--h4);}
+.bg-h5:hover{background-color:var(--h5);}
 .bg-a0:active{background-color:var(--a0);}
 .bg-a0.active{background-color:var(--a0);}
 .bg-a1:active{background-color:var(--a1);}
@@ -134,7 +155,11 @@ body {
 
 
 /* BORDER */
-.border-none{border:none;}
+.border-solid{border-style:solid;}
+.border-dashed{border-style:dashed;}
+.border-dotted{border-style:dotted;}
+.border-double{border-style:double;}
+.border-none{border-style:none;}
 .border-t-none{border-top:none;}
 .border-r-none{border-right:none;}
 .border-b-none{border-bottom:none;}
@@ -174,8 +199,12 @@ body {
 .border-t6{border-top-width:32px;}
 .border-r6{border-right-width:32px;}
 .border-b6{border-bottom-width:32px;}
-.border-l6{border-left-width:32px;}.border-p0{border-color:var(--p0);}/* #0100ca */.border-p1{border-color:var(--p1);}/* #00e5ff */.border-p2{border-color:var(--p2);}/* #f50057 */.border-g0{border-color:var(--g0);}/* #FBFBFB */.border-g1{border-color:var(--g1);}/* #E5E5E5 */.border-g2{border-color:var(--g2);}/* #CFCFCF */.border-g3{border-color:var(--g3);}/* #BABABA */.border-g4{border-color:var(--g4);}/* #A4A4A4 */.border-g5{border-color:var(--g5);}/* #8E8E8E */.border-g6{border-color:var(--g6);}/* #797979 */.border-g7{border-color:var(--g7);}/* #636363 */.border-g8{border-color:var(--g8);}/* #4D4D4D */.border-g9{border-color:var(--g9);}/* #383838 */.border-g10{border-color:var(--g10);}/* #222222 */.border-h0:hover{border-color:var(--h0);}/* #CFCFCF */
-.border-h1:hover{border-color:var(--h1);}/* #BABABA */
+.border-l6{border-left-width:32px;}.border-p0{border-color:var(--p0);}/* Medium Aquamarine light */.border-p1{border-color:var(--p1);}/* Bright Navy Blue light */.border-p2{border-color:var(--p2);}/* Royal Purple light */.border-p3{border-color:var(--p3);}/* Barbie Pink light */.border-p4{border-color:var(--p4);}/* Bittersweet Orange light */.border-p5{border-color:var(--p5);}/* Royal purple */.border-g0{border-color:var(--g0);}/* #FBFBFB */.border-g1{border-color:var(--g1);}/* #E5E5E5 */.border-g2{border-color:var(--g2);}/* #CFCFCF */.border-g3{border-color:var(--g3);}/* #BABABA */.border-g4{border-color:var(--g4);}/* #A4A4A4 */.border-g5{border-color:var(--g5);}/* #8E8E8E */.border-g6{border-color:var(--g6);}/* #797979 */.border-g7{border-color:var(--g7);}/* #636363 */.border-g8{border-color:var(--g8);}/* #4D4D4D */.border-g9{border-color:var(--g9);}/* #383838 */.border-g10{border-color:var(--g10);}/* #222222 */.border-h0:hover{border-color:var(--h0);}/* Medium Aquamarine */
+.border-h1:hover{border-color:var(--h1);}/* Bright Navy Blue */
+.border-h2:hover{border-color:var(--h2);}/* Royal Purple Hover */
+.border-h3:hover{border-color:var(--h3);}/* Barbie Pink */
+.border-h4:hover{border-color:var(--h4);}/* Bittersweet Orange */
+.border-h5:hover{border-color:var(--h5);}/* Minion Yellow */
 .border-a0:active{border-color:var(--a0);}/* #A4A4A4 */
 .border-a0.active{border-color:var(--a0);}/* #A4A4A4 */
 .border-a1:active{border-color:var(--a1);}/* #8E8E8E */
