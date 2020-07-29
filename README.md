@@ -9,12 +9,13 @@ Customize and generate a simple css style guide.
 
 ## usage
 
-Add a `config.json` file to your project
+1.) Add a `config.json` file to your project by copying & pasting the boilerplate `config.json` 
+provided in this repo.
 
-Add a run script to your `package.json` file
+2.) Add a run script to your `package.json` file
 "styles": "`npx cssmitten ./path/to/your/config.json` > ./path/to/styles.css"
 
-then type `npm run styles`
+3.) Type `npm run styles`
 
 
 
