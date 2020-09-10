@@ -11,6 +11,7 @@ module.exports = function width(state={}) {
 .min-w-0${query}{min-width:0;}
 .min-w-full${query}{min-width:100%;}
 .max-width-none${query}{max-width:none;}
+.max-w-full${query}{max-width:100%;}
 `
 
   return output

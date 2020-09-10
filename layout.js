@@ -5,6 +5,7 @@ const width = require('./width')
 const height = require('./height')
 const flex = require('./flex')
 const grid = require('./grid')
+const zIndex = require('./z-index')
 
 module.exports = function layout(state={}) {
   let query = state.label
@@ -18,5 +19,6 @@ ${width(state)}
 ${height(state)}
 ${flex(query)}
 ${grid(state)}
+${zIndex(state)}
 `
 }

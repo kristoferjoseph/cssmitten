@@ -1,12 +1,14 @@
-module.exports = `
+module.exports = function Cursor(query) {
+  return `
 /* CURSOR */
-.cursor-auto{cursor:auto;}
-.cursor-default{cursor:default;}
-.cursor-pointer{cursor:pointer;}
-.cursor-wait{cursor:wait;}
-.cursor-text{cursor:text;}
-.cursor-move{cursor:move;}
-.cursor-not-allowed{cursor:not-allowed;}
-.cursor-grab{cursor:grab;}
-.cursor-grabbing{cursor:grabbing;}
+.cursor-auto${query}{cursor:auto;}
+.cursor-default${query}{cursor:default;}
+.cursor-pointer${query}{cursor:pointer;}
+.cursor-wait${query}{cursor:wait;}
+.cursor-text${query}{cursor:text;}
+.cursor-move${query}{cursor:move;}
+.cursor-not-allowed${query}{cursor:not-allowed;}
+.cursor-grab${query}{cursor:grab;}
+.cursor-grabbing${query}{cursor:grabbing;}
 `
+}

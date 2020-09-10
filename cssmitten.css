@@ -229,7 +229,7 @@ body {
 
 /* FILL */
 .fill-none{fill:none;}
-.fill-cuttent{fill:currentColor;}
+.fill-current{fill:currentColor;}
 
 
 /* STROKE */
@@ -380,6 +380,7 @@ body {
 .min-w-0{min-width:0;}
 .min-w-full{min-width:100%;}
 .max-width-none{max-width:none;}
+.max-w-full{max-width:100%;}
 
 
 /* HEIGHT */
@@ -503,6 +504,13 @@ body {
 .gap-4{gap:0.422rem;}
 .gap-5{gap:0.317rem;}
 .gap-6{gap:0.238rem;}
+
+
+/* Z-INDEX */
+.z-auto{z-index:auto;}
+.z1{z-index:1;}
+.z0{z-index:0;}
+.z-1{z-index:-1;}
 
 
 
@@ -680,6 +688,26 @@ body {
 .outline-none{outline:0;}
   
 
+/* OPACITY */
+.opacity-0{opacity:0;}
+.opacity-25{opacity:0.25;}
+.opacity-50{opacity:0.5;}
+.opacity-75{opacity:0.75;}
+.opacity-100{opacity:1.0;}
+
+
+/* CURSOR */
+.cursor-auto{cursor:auto;}
+.cursor-default{cursor:default;}
+.cursor-pointer{cursor:pointer;}
+.cursor-wait{cursor:wait;}
+.cursor-text{cursor:text;}
+.cursor-move{cursor:move;}
+.cursor-not-allowed{cursor:not-allowed;}
+.cursor-grab{cursor:grab;}
+.cursor-grabbing{cursor:grabbing;}
+
+
 /* USER SELECT */
 .select-none{user-select:none;}
 .select-text{user-select:text;}
@@ -832,6 +860,7 @@ body {
 .min-w-0-lg{min-width:0;}
 .min-w-full-lg{min-width:100%;}
 .max-width-none-lg{max-width:none;}
+.max-w-full-lg{max-width:100%;}
 
 
 /* HEIGHT */
@@ -955,6 +984,13 @@ body {
 .gap-4-lg{gap:0.422rem;}
 .gap-5-lg{gap:0.317rem;}
 .gap-6-lg{gap:0.238rem;}
+
+
+/* Z-INDEX */
+.z-auto-lg{z-index:auto;}
+.z1-lg{z-index:1;}
+.z0-lg{z-index:0;}
+.z-1-lg{z-index:-1;}
 
 
 
@@ -1131,6 +1167,26 @@ body {
 /* OUTLINE */
 .outline-none-lg{outline:0;}
   
+
+/* OPACITY */
+.opacity-0-lg{opacity:0;}
+.opacity-25-lg{opacity:0.25;}
+.opacity-50-lg{opacity:0.5;}
+.opacity-75-lg{opacity:0.75;}
+.opacity-100-lg{opacity:1.0;}
+
+
+/* CURSOR */
+.cursor-auto-lg{cursor:auto;}
+.cursor-default-lg{cursor:default;}
+.cursor-pointer-lg{cursor:pointer;}
+.cursor-wait-lg{cursor:wait;}
+.cursor-text-lg{cursor:text;}
+.cursor-move-lg{cursor:move;}
+.cursor-not-allowed-lg{cursor:not-allowed;}
+.cursor-grab-lg{cursor:grab;}
+.cursor-grabbing-lg{cursor:grabbing;}
+
 
 /* USER SELECT */
 .select-none-lg{user-select:none;}

@@ -9,6 +9,7 @@ const visibility = require('./visibility')
 const objectFit = require('./object-fit')
 const objectPosition = require('./object-position')
 const outline = require('./outline')
+const opacity = require('./opacity')
 const container = require('./container')
 const media = require('./media')
 const userSelect = require('./user-select')
@@ -53,6 +54,8 @@ ${visibility(label)}
 ${objectFit(label)}
 ${objectPosition(label)}
 ${outline(label)}
+${opacity(label)}
+${cursor(label)}
 ${userSelect(label)}
 `
 }

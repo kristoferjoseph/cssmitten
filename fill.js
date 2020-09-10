@@ -2,7 +2,7 @@ module.exports = function fill (state={}) {
   const query = state.query || ''
   return `
 /* FILL */
-.fill-none{fill:none;}
-.fill-cuttent${query}{fill:currentColor;}
+.fill-none${query}{fill:none;}
+.fill-current${query}{fill:currentColor;}
 `
 }
