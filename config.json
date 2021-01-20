@@ -5,37 +5,26 @@
     "steps": 10
   },
   "grid": {
-    "steps": 6,
-    "heights": [
-      160
-    ]
+    "steps": 6
   },
   "colors": {
     "primary": [
       {
-        "label": "Medium Aquamarine light",
+        "label": "Clover green",
         "value": "#2CDD93"
       },
       {
-        "label": "Bright Navy Blue light",
-        "value": "#1F74D6"
+        "label": "Blue green",
+        "value": "#2B7D9A"
       },
       {
-        "label": "Royal Purple light",
-        "value": "hsl(267, 50%, 55%)"
+        "label": "Key lime",
+        "value": "#BBFFAA"
       },
       {
         "label": "Barbie Pink light",
         "value": "#E21893"
       },
-      {
-        "label": "Bittersweet Orange light",
-        "value": "#FF6263"
-      },
-      {
-        "label": "Royal purple",
-        "value": "hsl(267, 75%, 45%)"
-      }
     ],
     "greyscale": [
       {
@@ -85,60 +74,43 @@
     ],
     "hover": [
       {
-        "label": "Medium Aquamarine",
+        "label": "Clover hover",
         "value": "#3EE09C"
       },
       {
-        "label": "Bright Navy Blue",
+        "label": "Blue green hover",
         "value": "#2a80e0"
-      },
-      {
-        "label": "Royal Purple Hover",
-        "value": "hsl(267, 90%, 55%)"
-      },
-      {
-        "label": "Barbie Pink",
-        "value": "#DE1792"
-      },
-      {
-        "label": "Bittersweet Orange",
-        "value": "#FF4747"
-      },
-      {
-        "label": "Minion Yellow",
-        "value": "#FAE05D"
       }
     ],
     "active": [
       {
-        "label": "#A4A4A4",
+        "label": "Warm grey active",
         "value": "#A4A4A4"
       },
       {
-        "label": "#8E8E8E",
+        "label": "Warm middle grey active",
         "value": "#8E8E8E"
       }
     ],
     "disabled": [
       {
-        "label": "#797979",
+        "label": "Warm middle grey disabled",
         "value": "#797979"
       },
       {
-        "label": "#636363",
+        "label": "Warm dark grey disabled",
         "value": "#636363"
       }
     ]
   },
   "gradient": [
     {
-      "label": "outrun",
+      "label": "arc",
       "type": "linear",
       "direction": "0.4turn",
       "stops": [
-        "#0100ca",
-        "#00e5ff",
-        "#f50057"
+        "var(--p1)",
+        "var(--p2)"
       ]
     }
   ],
@@ -150,9 +122,7 @@
       1,
       2,
       4,
-      8,
-      16,
-      32
+      8
     ]
   },
   "radii": [
