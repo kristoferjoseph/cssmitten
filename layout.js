@@ -19,6 +19,6 @@ ${width(state)}
 ${height(state)}
 ${flex(query)}
 ${grid(state)}
-${zIndex(state)}
+${zIndex(query)}
 `
 }

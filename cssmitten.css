@@ -474,10 +474,10 @@ body {
 
 
 /* Z-INDEX */
-.z-auto[object Object]{z-index:auto;}
-.z1[object Object]{z-index:1;}
-.z0[object Object]{z-index:0;}
-.z-1[object Object]{z-index:-1;}
+.z-auto{z-index:auto;}
+.z1{z-index:1;}
+.z0{z-index:0;}
+.z-1{z-index:-1;}
 
 
 
@@ -953,10 +953,10 @@ body {
 
 
 /* Z-INDEX */
-.z-auto[object Object]{z-index:auto;}
-.z1[object Object]{z-index:1;}
-.z0[object Object]{z-index:0;}
-.z-1[object Object]{z-index:-1;}
+.z-auto-lg{z-index:auto;}
+.z1-lg{z-index:1;}
+.z0-lg{z-index:0;}
+.z-1-lg{z-index:-1;}
 
 
 
