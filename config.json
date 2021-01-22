@@ -92,8 +92,12 @@
         "value": "#8E8E8E"
       },
       {
-        "label": "Dark blue green acrive",
+        "label": "Dark blue green active",
         "value": "#1D5266"
+      },
+      {
+        "label": "Almost white active",
+        "value": "#E5E5E5"
       }
     ],
     "disabled": [

@@ -21,7 +21,8 @@
   --h1:#40B9E5;/* Blue green hover */
   --a0:#A4A4A4;/* Warm grey active */
   --a1:#8E8E8E;/* Warm middle grey active */
-  --a2:#1D5266;/* Dark blue green acrive */
+  --a2:#1D5266;/* Dark blue green active */
+  --a3:#E5E5E5;/* Almost white active */
   --d0:#797979;/* Warm middle grey disabled */
   --d1:#636363;/* Warm dark grey disabled */
 }
@@ -82,8 +83,10 @@ body {
 .text-a0.active{color:var(--a0);}/* Warm grey active */
 .text-a1:active{color:var(--a1);}/* Warm middle grey active */
 .text-a1.active{color:var(--a1);}/* Warm middle grey active */
-.text-a2:active{color:var(--a2);}/* Dark blue green acrive */
-.text-a2.active{color:var(--a2);}/* Dark blue green acrive */
+.text-a2:active{color:var(--a2);}/* Dark blue green active */
+.text-a2.active{color:var(--a2);}/* Dark blue green active */
+.text-a3:active{color:var(--a3);}/* Almost white active */
+.text-a3.active{color:var(--a3);}/* Almost white active */
 .text-d0:disabled{color:var(--d0);}/* Warm middle grey disabled */
 .text-d1:disabled{color:var(--d1);}/* Warm dark grey disabled */
 
@@ -134,6 +137,8 @@ body {
 .bg-a1.active{background-color:var(--a1);}
 .bg-a2:active{background-color:var(--a2);}
 .bg-a2.active{background-color:var(--a2);}
+.bg-a3:active{background-color:var(--a3);}
+.bg-a3.active{background-color:var(--a3);}
 .bg-d0:disabled{background-color:var(--d0);}
 .bg-d1:disabled{background-color:var(--d1);}
 
@@ -182,8 +187,10 @@ body {
 .border-a0.active{border-color:var(--a0);}/* Warm grey active */
 .border-a1:active{border-color:var(--a1);}/* Warm middle grey active */
 .border-a1.active{border-color:var(--a1);}/* Warm middle grey active */
-.border-a2:active{border-color:var(--a2);}/* Dark blue green acrive */
-.border-a2.active{border-color:var(--a2);}/* Dark blue green acrive */
+.border-a2:active{border-color:var(--a2);}/* Dark blue green active */
+.border-a2.active{border-color:var(--a2);}/* Dark blue green active */
+.border-a3:active{border-color:var(--a3);}/* Almost white active */
+.border-a3.active{border-color:var(--a3);}/* Almost white active */
 .border-d0:disabled{border-color:var(--d0);}/* Warm middle grey disabled */
 .border-d1:disabled{border-color:var(--d1);}/* Warm dark grey disabled */
 
