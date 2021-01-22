@@ -90,6 +90,10 @@
       {
         "label": "Warm middle grey active",
         "value": "#8E8E8E"
+      },
+      {
+        "label": "Dark blue green acrive",
+        "value": "#1D5266"
       }
     ],
     "disabled": [
