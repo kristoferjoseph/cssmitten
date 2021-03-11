@@ -1,3 +1,48 @@
+/*
+  --p1:#ffffff;/* white */
+  --p2:#ebebeb;/* white-1 */
+  --p3:#0077cc;/* cerulean */
+  --p4:#a8a8a8;/* greyish */
+  --p5:#666666;/* brownish-grey */
+  --p6:#444444;/* greyish-brown */
+  --p7:#eb0052;/* pink-red */
+  --p8:#434346;/* charcoal-grey */
+  --p9:#333333;/* blackish */
+  --p10:#0cd000;/* vibrant-green */
+  --p11:#ff455a;/* watermelon */
+  --p12:#f7f7f9;/* well-gray */
+  --p13:#ededf0;/* pale-grey */
+  --p14:#f5f5f7;/* pale-grey-2 */
+  --p15:#fafafc;/* pale-grey-3 */
+  --p16:#f0f0f0;/* white-3 */
+  --p17:#ffc245;/* butterscotch */
+  --p18:#dedee0;/* silver-two */
+  --p19:#c5c5c7;/* silver */
+  --p20:#97979c;/* cool-grey */
+  --p21:#ffe8f0;/* light-pink */
+  --p22:#9ed7ff;/* baby-blue */
+  --p23:#0057b8;/* ocean-blue */
+  --p24:#fff6e3;/* off-white */
+  --p25:#002d4d;/* navy */
+  --p26:#0094ff;/* azure */
+  --h0:#0094ff;/* azure */
+  --h1:#ff1164;/* pink-red-2 */
+  --h2:#f0f0f0;/* white-3 */
+  --h3:#ffffff;/* white */
+  --a0:#0057b8;/* ocean-blue */
+  --a1:#d8d8d8;/* white-2 */
+  --a2:#d6004b;/* ruby */
+  --a3:#ededf0;/* pale-grey */
+  --a4:#434346;/* charcoal-grey */
+  --a5:#ffffff;/* white */
+  --a6:#0077cc;/* cerulean */
+  --a7:#001F36;/* dark-navy */
+  --a8:#E6F4FF;/* light-blue */
+  --d0:#eaeaea;/* white-5 */
+  --d1:#a8a8a8;/* greyish */
+  --d2:#dedee0;/* silver-two */
+  --d3:#97979c;/* cool-grey */
+*/
 {
   "base": 18,
   "scale": {
