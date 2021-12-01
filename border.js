@@ -20,7 +20,7 @@ module.exports = function border(state={}) {
 .border-b-none${query}{border-bottom:none;}
 .border-l-none${query}{border-left:none;}
 `
-  widths.map(function (w, i) {
+  widths.map((w, i) => {
     output += `
 .border${i}${query}{border-width:${w}px;}
 .border-t${i}${query}{border-top-width:${w}px;}
@@ -44,14 +44,14 @@ module.exports = function border(state={}) {
   function handler (a, n) {
     a = a || []
     a.forEach((color, i) => {
-        let variable = `${n}${i}`
-        output += `.border-${variable}${query}{border-color:var(--${variable});}/* ${color.label} */`
-      })
+      let variable = `${n}${i}`
+      output += `.border-${variable}${query}{border-color:var(--${variable});}/* ${color.label} */`
+    })
   }
 
   function hover (a) {
     a = a || []
-    a.forEach(function (color, i) {
+    a.forEach((color, i) => {
       variable = 'h' + i
       output += `.border-${variable}${query}:hover{border-color:var(--${variable});}/* ${color.label} */\n`
     })
@@ -59,7 +59,7 @@ module.exports = function border(state={}) {
 
   function active (a) {
     a = a || []
-    a.forEach(function (color, i) {
+    a.forEach((color, i) => {
       variable = 'a' + i
       output += `.border-${variable}${query}:active{border-color:var(--${variable});}/* ${color.label} */\n`
       output += `.border-${variable}${query}.active{border-color:var(--${variable});}/* ${color.label} */\n`
@@ -68,7 +68,7 @@ module.exports = function border(state={}) {
 
   function disabled (a) {
     a = a || []
-    a.forEach(function (color, i) {
+    a.forEach((color, i) => {
       variable = 'd' + i
       output += `.border-${variable}${query}:disabled{border-color:var(--${variable});}/* ${color.label} */\n`
     })

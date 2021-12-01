@@ -15,34 +15,33 @@ const media = require('./media')
 const userSelect = require('./user-select')
 
 module.exports = function cssmitten (props) {
-  let config
   try {
-    config = JSON.parse(props)
+    const config = JSON.parse(props)
+    const queries = config.queries
+    let output = theme(config)
+    output += styles({config})
+
+    Object.keys(queries)
+      .map(
+        function (query) {
+          output += media(queries[query], styles({config, query}))
+        }
+      )
+
+    return output
   } catch(err) {
     throw new Error('Unable to parse config.json')
   }
-  let queries = config.queries
-  let output = theme(config)
-  output += styles({config})
-
-  Object.keys(queries)
-    .map(
-      function (query) {
-        output += media(queries[query], styles({config, query}))
-      }
-    )
-
-  return output
 }
 
 function styles (state={}) {
-  let config = state.config || {}
-  let queries = config.queries || {}
-  let query = state.query || ''
-  let label = query
+  const config = state.config || {}
+  const queries = config.queries || {}
+  const query = state.query || ''
+  const label = query
     ? `-${query}`
     : ''
-  let width = queries[query]
+  const width = queries[query]
   return `
 ${container({width, label})}
 ${typography({config, label})}
