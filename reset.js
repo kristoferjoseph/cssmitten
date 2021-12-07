@@ -1,5 +1,5 @@
 module.exports = function reset (query) {
-  return `/* RESET */
+  return /*css*/`/* RESET */
 *,
 *::before,
 *::after {
@@ -75,35 +75,6 @@ table {
 textarea {
   vertical-align: top;
   overflow: auto;
-}
-[type=date],
-[type=datetime],
-[type=datetime-local],
-[type=email],
-[type=month],
-[type=number],
-[type=password],
-[type=search],
-[type=tel],
-[type=text],
-[type=time],
-[type=url],
-[type=week],
-textarea,
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 100%;
-}
-[type='checkbox'],
-[type='radio'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-::-moz-placeholder {
-  opacity: 1;
 }
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
