@@ -4,7 +4,7 @@ module.exports = function background(state={}) {
   const query = state.query || ''
   const config = state.config
   const colors = config.colors
-  let output = `
+  let output = /*css*/`
 /* BACKGROUND */
 .bg-fixed${query}{background-attachment:fixed;}
 .bg-local${query}{background-attachment:local;}

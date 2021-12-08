@@ -1,5 +1,5 @@
 module.exports = function (query) {
-  return `
+  return /*css*/`
 /* WEIGHTS */
 .font-hairline${query}{font-weight:100;}
 .font-thin${query}{font-weight:200;}

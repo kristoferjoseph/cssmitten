@@ -7,7 +7,7 @@ module.exports = function grid(state={}) {
   let gridSteps = grid.steps || 12
   let gridHeights = grid.heights || []
   let query = state.label || ''
-  let output = `
+  let output = /*css*/`
 /* GRID */
 .flow-row${query}{grid-auto-flow:row;}
 .flow-col${query}{grid-auto-flow:column;}

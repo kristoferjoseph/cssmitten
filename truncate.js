@@ -1,4 +1,4 @@
-module.exports = `
+module.exports = /*css*/`
 .truncate,
 .space-nowrap{white-space:nowrap;}
 .truncate,

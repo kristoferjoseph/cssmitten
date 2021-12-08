@@ -1,5 +1,5 @@
 module.exports = function position(query='') {
-  return `
+  return /*css*/`
 /* POSITION */
 .sticky${query}{position:sticky;}
 .static${query}{position:static;}

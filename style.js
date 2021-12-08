@@ -1,5 +1,5 @@
 module.exports = function Style(query) {
-  return `
+  return /*css*/`
 /* Style */
 .italic${query}{font-style:italic;}
 .not-italic${query}{font-style:normal;}

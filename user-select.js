@@ -1,5 +1,5 @@
 module.exports = function userSelect(query) {
-  return `
+  return /*css*/`
 /* USER SELECT */
 .select-none${query}{user-select:none;}
 .select-text${query}{user-select:text;}

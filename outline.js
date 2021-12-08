@@ -1,5 +1,5 @@
 module.exports = function Outline(query) {
-  return `
+  return /*css*/`
 /* OUTLINE */
 .outline-none${query}{outline:0;}
   `

@@ -1,5 +1,5 @@
 module.exports = function decoration(query='') {
-  return `
+  return /*css*/`
 /* DECORATION */
 .no-underline${query}{text-decoration:none;}
 .underline${query}{text-decoration:underline;}

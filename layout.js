@@ -9,7 +9,7 @@ const zIndex = require('./z-index')
 
 module.exports = function layout(state={}) {
   let query = state.label
-  return `
+  return /*css*/`
 /* -----  LAYOUT ----- */
 
 ${position(query)}

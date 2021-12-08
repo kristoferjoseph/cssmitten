@@ -4,7 +4,7 @@ const rems = require('./rems')
 module.exports = function padding(state={}) {
   let config = state.config
   let query = state.label
-  let output = `
+  let output = /*css*/`
 /* PADDING */
 .p-none${query}{padding:0;}
 .pt-none${query}{padding-top:0;}

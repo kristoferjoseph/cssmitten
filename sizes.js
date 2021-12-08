@@ -5,7 +5,7 @@ module.exports = function sizes(state={}) {
   let config = state.config
   let query = state.label
   let scale = Scale(config)
-  let output = `
+  let output = /*css*/`
 /* SIZES */
 `
   let l = scale.length

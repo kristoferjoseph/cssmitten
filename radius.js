@@ -3,7 +3,7 @@ module.exports = function radius (state) {
   var query = state.query || ''
   var config = state.config
   var radii = config.radii
-  var output = `
+  var output = /*css*/`
 /* RADIUS */
 .radius-none${query}{border-radius:0;}
 .radius-100${query}{border-radius:100%;}

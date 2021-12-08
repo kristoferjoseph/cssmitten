@@ -1,5 +1,5 @@
 module.exports = function positioning(query='') {
-  return `
+  return /*css*/`
  /* POSITIONING */
 .top0${query}{top:0;}
 .left0${query}{left:0;}

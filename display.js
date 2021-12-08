@@ -1,5 +1,5 @@
 module.exports = function display (query) {
-  return `
+  return /*css*/`
 /* DISPLAY */
 .hidden${query}{display:none;}
 .block${query}{display:block;}

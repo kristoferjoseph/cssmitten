@@ -4,7 +4,7 @@ module.exports = function color(state={}) {
   const query = state.query || ''
   const config = state.config
   const colors = config.colors
-  let output = `
+  let output = /*css*/`
 /* COLOR */
 .text-current${query}{color:currentColor;}/* current color */
 .text-transparent${query}{color:transparent;}/* transparent */

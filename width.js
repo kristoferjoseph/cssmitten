@@ -3,7 +3,7 @@ const rems = require('./rems')
 module.exports = function width(state={}) {
   let config = state.config
   let query = state.label
-  let output = `
+  let output = /*css*/`
 /* WIDTH */
 .w-0${query}{width:0;}
 .w-full${query}{width:100%;}

@@ -1,5 +1,5 @@
 module.exports = function Container({width='', label=''}) {
-  return `
+  return /*css*/`
 /* CONTAINER  */
 .container${label}{max-width:${width || '100%'};}
 `

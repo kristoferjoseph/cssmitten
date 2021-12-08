@@ -1,5 +1,5 @@
 module.exports = function flex(query='') {
-  return `
+  return /*css*/`
 /* FLEX */
 .flex-1${query}{flex: 1 1 0%;}
 .flex-auto${query}{flex: 1 1 auto;}

@@ -1,5 +1,5 @@
 module.exports = function dimensions (query) {
-  return `
+  return /*css*/`
 /* DIMENSIONS */
 .w-auto${query}{width:auto;}
 .h-auto${query}{height:auto;}

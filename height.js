@@ -3,7 +3,7 @@ const rems = require('./rems')
 module.exports = function height(state={}) {
   let config = state.config
   let query = state.label
-  let output = `
+  let output = /*css*/`
 /* HEIGHT */
 .h-0${query}{height:0;}
 .h-full${query}{height:100%;}

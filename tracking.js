@@ -1,5 +1,5 @@
 module.exports = function tracking(query) {
-  return `
+  return /*css*/`
 /* TRACKING */
 .tracking3${query}{letter-spacing: 0.1em;}
 .tracking2${query}{letter-spacing: 0.05em;}
