@@ -1,5 +1,5 @@
 module.exports = function Cursor(query) {
-  return `
+  return /*css*/`
 /* CURSOR */
 .cursor-auto${query}{cursor:auto;}
 .cursor-default${query}{cursor:default;}

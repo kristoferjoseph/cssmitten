@@ -1,5 +1,5 @@
 module.exports = function ObjectPosition(query) {
-  return `
+  return /*css*/`
 /* OBJECT POSITION */
 .object-b${query}{object-position:bottom;}
 .object-c${query}{object-position:center;}

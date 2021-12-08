@@ -1,5 +1,5 @@
 module.exports = function transform(query='') {
-  return `
+  return /*css*/`
 /* TEXT TRANSFORM */
 .uppercase${query}{text-transform:uppercase;}
 .lowercase${query}{text-transform:lowercase;}

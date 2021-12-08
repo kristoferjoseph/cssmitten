@@ -1,5 +1,5 @@
 module.exports = function list(query='') {
-  return`
+  return /*css*/`
 /* LIST */
 .list-none${query}{list-style:none;}
 .list-disc${query}{list-style:disc;}

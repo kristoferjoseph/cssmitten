@@ -1,5 +1,5 @@
 module.exports = function overflow (query) {
-  return `
+  return /*css*/`
 /* VISIBILITY */
 .invisible${query}{visibility:hidden;}
 .visible${query}{visibility:visible;}

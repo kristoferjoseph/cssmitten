@@ -1,7 +1,7 @@
 module.exports = function gradient(state={}) {
   let config = state.config
   let gradients = config.gradient || []
-  let output = `
+  let output = /*css*/`
   /* GRADIENT */`
 
   gradients.forEach(function (entry, i) {

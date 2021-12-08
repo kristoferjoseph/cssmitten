@@ -42,7 +42,7 @@ function styles (state={}) {
     ? `-${query}`
     : ''
   const width = queries[query]
-  return `
+  return /*css*/`
 ${container({width, label})}
 ${typography({config, label})}
 ${layout({config, label})}

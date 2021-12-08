@@ -1,5 +1,5 @@
 module.exports = function align(query='') {
-  return `
+  return /*css*/`
 /* ALIGN */
 .text-inherit${query}{text-align:inherit;}
 .text-center${query}{text-align:center;}

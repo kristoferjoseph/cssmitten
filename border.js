@@ -8,7 +8,7 @@ module.exports = function border(state={}) {
   const widths = (config.borders &&
     config.borders.widths || [1])
   widths.unshift(0)
-  let output = `
+  let output = /*css*/`
 /* BORDER */
 .border-solid${query}{border-style:solid;}
 .border-dashed${query}{border-style:dashed;}

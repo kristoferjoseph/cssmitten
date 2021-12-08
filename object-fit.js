@@ -1,5 +1,5 @@
 module.exports = function ObjectFit(query='') {
-  return `
+  return /*css*/`
 /* OBJECT FIT */
 .object-contain${query}{object-fit:contain;}
 .object-cover${query}{object-fit:cover;}

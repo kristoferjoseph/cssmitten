@@ -1,7 +1,7 @@
 const Scale = require('./scale')
 const rems = require('./rems')
 module.exports = function lineHeight (query='') {
-  return `
+  return /*css*/`
 /* LINE HEIGHT */
 .leading5${query}{line-height: 2;}
 .leading4${query}{line-height: 1.625;}

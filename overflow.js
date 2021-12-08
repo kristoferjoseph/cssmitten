@@ -1,5 +1,5 @@
 module.exports = function overflow (query) {
-  return `
+  return /*css*/`
 /* OVERFLOW */
 .overflow-auto${query}{overflow:auto;}
 .truncate,

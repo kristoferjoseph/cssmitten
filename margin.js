@@ -4,7 +4,7 @@ module.exports = function margin (state) {
   state = state || {}
   var config = state.config
   var query = state.label
-  var output = `
+  var output = /*css*/`
 /* MARGIN */
 .m-none${query}{margin:0;}
 .mt-none${query}{margin-top:0;}

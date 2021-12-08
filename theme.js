@@ -10,7 +10,7 @@ const stroke = require('./stroke')
 
 module.exports = function theme(config) {
 
-  return `
+  return /*css*/`
 /* ----- THEME ----- */
 ${variables({config})}
 ${reset()}

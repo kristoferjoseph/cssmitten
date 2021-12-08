@@ -1,5 +1,5 @@
 module.exports = function whitespace(query) {
-  return `
+  return /*css*/`
 /* WHITESPACE */
 .whitespace-normal${query}{white-space:normal;}
 .truncate,

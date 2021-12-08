@@ -1,5 +1,5 @@
 module.exports = function wordbreak(query) {
-  return `
+  return /*css*/`
 /* WORDBREAK */
 .break-normal${query}{word-break:normal;}
 .break-normal,
